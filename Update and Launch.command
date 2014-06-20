@@ -1,1 +1,0 @@
-/Volumes/Macintosh HD/Users/ben/Library/Application Support/Steam/SteamApps/common/Kerbal Space Program/Update and Launch.command
