@@ -26,6 +26,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -109,25 +112,13 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
+		name = FuelPanel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
@@ -157,17 +148,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -256,6 +270,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleSAS
@@ -303,8 +320,9 @@ PART
 			}
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -516,6 +534,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -552,6 +574,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -590,6 +616,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -627,6 +657,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = MonoPropellant
@@ -661,6 +695,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -701,52 +738,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -772,6 +764,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -812,52 +807,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -883,6 +833,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -923,52 +876,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -994,6 +902,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -1034,52 +945,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1100,6 +966,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -1477,28 +1346,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -1525,17 +1372,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -2067,6 +1937,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2107,52 +1980,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2178,6 +2006,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2218,52 +2049,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2289,6 +2075,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2329,52 +2118,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2400,6 +2144,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2440,52 +2187,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2511,6 +2213,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2551,52 +2256,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2622,6 +2282,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2662,52 +2325,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2733,6 +2351,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2773,52 +2394,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2844,6 +2420,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleRCS
@@ -2884,52 +2463,7 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2956,6 +2490,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3051,6 +2589,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3078,6 +2620,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3107,6 +2653,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3134,6 +2684,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3279,6 +2833,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3306,6 +2864,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3335,6 +2897,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3362,6 +2928,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3391,6 +2961,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3418,6 +2992,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3447,6 +3025,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3474,6 +3056,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3907,6 +3493,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3937,6 +3527,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3969,6 +3563,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3999,6 +3597,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4031,6 +3633,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4061,6 +3667,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4313,6 +3923,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4343,6 +3957,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4375,6 +3993,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4405,6 +4027,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4437,6 +4063,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4467,6 +4097,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4719,6 +4353,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4749,6 +4387,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4781,6 +4423,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4811,6 +4457,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -4843,6 +4493,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4873,6 +4527,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5125,6 +4783,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5155,6 +4817,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5187,6 +4853,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5217,6 +4887,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5249,6 +4923,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5279,6 +4957,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5531,6 +5213,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5561,6 +5247,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5593,6 +5283,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5623,6 +5317,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5655,6 +5353,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5685,6 +5387,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5937,6 +5643,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -5967,6 +5677,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -5999,6 +5713,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -6029,6 +5747,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -6061,6 +5783,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -6091,6 +5817,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -6343,6 +6073,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -6373,6 +6107,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -6405,6 +6143,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -6435,6 +6177,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -6467,6 +6213,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -6497,6 +6247,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -7485,6 +7239,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -7543,28 +7300,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -7591,17 +7326,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -7638,6 +7396,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -7687,8 +7448,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -7766,6 +7528,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -7817,63 +7582,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -7915,6 +7635,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -7966,63 +7689,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8064,6 +7742,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -8115,63 +7796,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8213,6 +7849,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -8264,63 +7903,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8362,6 +7956,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -8413,63 +8010,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8511,6 +8063,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -8562,63 +8117,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8660,6 +8170,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -8711,63 +8224,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -8801,6 +8269,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -8866,55 +8337,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -8941,6 +8363,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -9336,6 +8762,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -9382,55 +8811,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -9457,6 +8837,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -9504,55 +8887,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -9575,6 +8909,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -9649,55 +8986,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -9720,6 +9008,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -9824,55 +9115,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -9898,6 +9140,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -10000,55 +9245,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -10074,6 +9270,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -10177,55 +9376,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -10248,6 +9398,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -10279,136 +9432,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -10704,6 +9817,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -10762,28 +9878,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -10810,17 +9904,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -10857,6 +9974,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -10906,8 +10026,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -10985,6 +10106,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11036,63 +10160,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11134,6 +10213,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11185,63 +10267,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11283,6 +10320,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11334,63 +10374,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11432,6 +10427,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11483,63 +10481,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11581,6 +10534,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11632,63 +10588,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11730,6 +10641,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11781,63 +10695,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -11879,6 +10748,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -11930,63 +10802,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -12020,6 +10847,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -12085,55 +10915,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -12160,6 +10941,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -12555,6 +11340,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -12601,55 +11389,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -12676,6 +11415,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -12723,55 +11465,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -12794,6 +11487,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -12868,55 +11564,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -12939,6 +11586,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -13043,55 +11693,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -13117,6 +11718,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -13219,55 +11823,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -13293,6 +11848,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -13396,55 +11954,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -13467,6 +11976,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -13498,136 +12010,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -13923,6 +12395,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -13981,28 +12456,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -14029,17 +12482,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14076,6 +12552,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -14125,8 +12604,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -14204,6 +12684,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -14255,63 +12738,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14353,6 +12791,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -14404,63 +12845,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14502,6 +12898,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -14553,63 +12952,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14651,6 +13005,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -14702,63 +13059,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14800,6 +13112,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -14851,63 +13166,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -14949,6 +13219,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -15000,63 +13273,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -15098,6 +13326,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -15149,63 +13380,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -15239,6 +13425,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -15304,55 +13493,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -15379,6 +13519,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -15774,6 +13918,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -15820,55 +13967,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -15895,6 +13993,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -15942,55 +14043,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -16013,6 +14065,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -16087,55 +14142,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -16158,6 +14164,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -16262,55 +14271,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -16336,6 +14296,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -16438,55 +14401,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -16512,6 +14426,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -16615,55 +14532,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -16686,6 +14554,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -16717,136 +14588,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -17142,6 +14973,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -17200,28 +15034,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -17248,17 +15060,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -17295,6 +15130,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -17344,8 +15182,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -17423,6 +15262,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -17474,63 +15316,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -17572,6 +15369,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -17623,63 +15423,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -17721,6 +15476,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -17772,63 +15530,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -17870,6 +15583,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -17921,63 +15637,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -18019,6 +15690,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -18070,63 +15744,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -18168,6 +15797,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -18219,63 +15851,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -18317,6 +15904,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -18368,63 +15958,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -18458,6 +16003,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -18523,55 +16071,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -18598,6 +16097,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -18993,6 +16496,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -19039,55 +16545,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -19114,6 +16571,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -19161,55 +16621,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -19232,6 +16643,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -19306,55 +16720,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -19377,6 +16742,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -19481,55 +16849,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -19555,6 +16874,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -19657,55 +16979,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -19731,6 +17004,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -19834,55 +17110,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -19905,6 +17132,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -19936,136 +17166,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -20361,6 +17551,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -20419,28 +17612,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -20467,17 +17638,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -20514,6 +17708,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -20563,8 +17760,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -20641,6 +17839,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -20692,63 +17893,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -20790,6 +17946,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -20841,63 +18000,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -20939,6 +18053,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -20990,63 +18107,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -21088,6 +18160,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -21139,63 +18214,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -21237,6 +18267,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -21288,63 +18321,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -21386,6 +18374,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -21437,63 +18428,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -21535,6 +18481,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -21586,63 +18535,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -21676,6 +18580,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -21741,55 +18648,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -21816,6 +18674,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -22211,6 +19073,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -22257,55 +19122,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -22332,6 +19148,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -22379,55 +19198,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -22450,6 +19220,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -22524,55 +19297,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -22595,6 +19319,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -22699,55 +19426,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -22773,6 +19451,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -22875,55 +19556,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -22949,6 +19581,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -23052,55 +19687,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -23123,6 +19709,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -23154,136 +19743,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -23579,6 +20128,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -23637,28 +20189,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -23685,17 +20215,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -23732,6 +20285,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -23781,8 +20337,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -23859,6 +20416,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -23910,63 +20470,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24008,6 +20523,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24059,63 +20577,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24157,6 +20630,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24208,63 +20684,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24306,6 +20737,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24357,63 +20791,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24455,6 +20844,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24506,63 +20898,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24604,6 +20951,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24655,63 +21005,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24753,6 +21058,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -24804,63 +21112,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -24894,6 +21157,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -24959,55 +21225,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -25034,6 +21251,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -25429,6 +21650,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -25475,55 +21699,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -25550,6 +21725,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -25597,55 +21775,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -25668,6 +21797,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -25742,55 +21874,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -25813,6 +21896,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -25917,55 +22003,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -25991,6 +22028,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -26093,55 +22133,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -26167,6 +22158,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -26270,55 +22264,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -26341,6 +22286,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -26372,136 +22320,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -26797,6 +22705,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -26855,28 +22766,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -26903,17 +22792,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -26950,6 +22862,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -26999,8 +22914,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -27077,6 +22993,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27128,63 +23047,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27226,6 +23100,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27277,63 +23154,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27375,6 +23207,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27426,63 +23261,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27524,6 +23314,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27575,63 +23368,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27673,6 +23421,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27724,63 +23475,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27822,6 +23528,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -27873,63 +23582,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -27971,6 +23635,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -28022,63 +23689,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -28112,6 +23734,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -28177,55 +23802,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -28252,6 +23828,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -28647,6 +24227,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -28693,55 +24276,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -28768,6 +24302,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -28815,55 +24352,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -28886,6 +24374,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -28960,55 +24451,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -29031,6 +24473,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -29135,55 +24580,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -29209,6 +24605,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -29311,55 +24710,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -29385,6 +24735,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -29488,55 +24841,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -29559,6 +24863,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -29590,136 +24897,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -30015,6 +25282,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -30073,28 +25343,6 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -30121,17 +25369,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -30168,6 +25439,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -30217,8 +25491,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -30295,6 +25570,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -30346,63 +25624,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -30444,6 +25677,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -30495,63 +25731,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -30593,6 +25784,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -30644,63 +25838,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -30742,6 +25891,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -30793,63 +25945,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -30891,6 +25998,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -30942,63 +26052,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -31040,6 +26105,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -31091,63 +26159,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -31189,6 +26212,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleDeployableSolarPanel
@@ -31240,63 +26266,18 @@ PART
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSolarPanelWasteHeatModule
+			isEnabled = True
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FNSolarPanelWasteHeatModule
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -31330,6 +26311,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -31395,55 +26379,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -31470,6 +26405,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -31865,6 +26804,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -31911,55 +26853,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -31986,6 +26879,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -32033,55 +26929,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -32104,6 +26951,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -32178,55 +27028,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -32249,6 +27050,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -32353,55 +27157,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -32427,6 +27182,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -32529,55 +27287,6 @@ PART
 				actionGroup = None
 			}
 		}
-	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -32603,6 +27312,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleEnviroSensor
@@ -32706,55 +27418,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -32777,6 +27440,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -32808,136 +27474,96 @@ PART
 	}
 	MODULE
 	{
-		name = FNSeismicProbe
-		isEnabled = True
-		probeIsEnabled = False
-		Deployed = False
-		result_string = 
-		result_title = 
-		transmit_value = 0
-		recovery_value = 0
-		data_size = 0
-		xmit_scalar = 0
-		ref_value = 0
-		data_gend = False
-		EVENTS
-		{
-			ActivateProbe
-			{
-				active = True
-				guiActive = True
-				guiIcon = Record Seismic Data
-				guiName = Record Seismic Data
-				category = Record Seismic Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeactivateProbe
-			{
-				active = False
-				guiActive = True
-				guiIcon = Stop Recording
-				guiName = Stop Recording
-				category = Stop Recording
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			DeployExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy
-				guiName = Deploy
-				category = Deploy
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ResetExperiment
-			{
-				active = True
-				guiActive = True
-				guiIcon = Reset
-				guiName = Reset
-				category = Reset
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ReviewData
-			{
-				active = True
-				guiActive = True
-				guiIcon = Review Data
-				guiName = Review Data
-				category = Review Data
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			ResetAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleScienceExperiment
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
-			ContextMenuGrab
+			name = FNSeismicProbe
+			isEnabled = True
+			probeIsEnabled = False
+			Deployed = False
+			result_string = 
+			result_title = 
+			transmit_value = 0
+			recovery_value = 0
+			data_size = 0
+			xmit_scalar = 0
+			ref_value = 0
+			data_gend = False
+			EVENTS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				ActivateProbe
+				{
+					active = True
+					guiActive = True
+					guiIcon = Record Seismic Data
+					guiName = Record Seismic Data
+					category = Record Seismic Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeactivateProbe
+				{
+					active = False
+					guiActive = True
+					guiIcon = Stop Recording
+					guiName = Stop Recording
+					category = Stop Recording
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				DeployExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Deploy
+					guiName = Deploy
+					category = Deploy
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ResetExperiment
+				{
+					active = True
+					guiActive = True
+					guiIcon = Reset
+					guiName = Reset
+					category = Reset
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+				ReviewData
+				{
+					active = True
+					guiActive = True
+					guiIcon = Review Data
+					guiName = Review Data
+					category = Review Data
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
 			}
-			ContextMenuDrop
+			ACTIONS
 			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				DeployAction
+				{
+					actionGroup = None
+				}
+				ResetAction
+				{
+					actionGroup = None
+				}
 			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 }
 PART
@@ -32967,6 +27593,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -32994,6 +27624,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -33023,6 +27657,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -33050,6 +27688,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -33294,6 +27936,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -33324,6 +27970,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -33356,6 +28006,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -33386,6 +28040,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -33418,6 +28076,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -33449,6 +28111,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -33479,6 +28145,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART

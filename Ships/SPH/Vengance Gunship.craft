@@ -27,6 +27,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleCommand
@@ -254,25 +257,28 @@ PART
 	}
 	MODULE
 	{
-		name = ExWorkshop
-		isEnabled = True
-		EVENTS
-		{
-			ExDiscoverWorkshops
-			{
-				active = True
-				guiActive = False
-				guiIcon = 
-				guiName = 
-				category = 
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = RasterPropMonitorComputer
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
@@ -302,17 +308,40 @@ PART
 	}
 	MODULE
 	{
-		name = FNModuleRadiation
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
+		MODULE
 		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -353,6 +382,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -427,55 +459,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -544,34 +527,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -595,34 +561,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -690,6 +639,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -730,6 +683,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -768,6 +725,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -798,6 +759,68 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
 	}
 	MODULE
 	{
@@ -863,77 +886,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
+		name = ModuleConfigBackup
+		MODULE
 		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
 			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			Shutdown
+			ACTIONS
 			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSabreHeating
-		isEnabled = True
-		IsEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -972,6 +937,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -993,6 +962,68 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
 	}
 	MODULE
 	{
@@ -1058,77 +1089,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
+		name = ModuleConfigBackup
+		MODULE
 		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
 			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			Shutdown
+			ACTIONS
 			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSabreHeating
-		isEnabled = True
-		IsEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -1167,6 +1140,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -1188,6 +1165,68 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
 	}
 	MODULE
 	{
@@ -1253,77 +1292,19 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
+		name = ModuleConfigBackup
+		MODULE
 		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
 			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
-			Shutdown
+			ACTIONS
 			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
 			}
 		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleSabreHeating
-		isEnabled = True
-		IsEnabled = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -1362,6 +1343,15 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -1384,34 +1374,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1438,6 +1411,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1714,6 +1691,15 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -1736,34 +1722,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1790,6 +1759,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2065,6 +2038,15 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2087,34 +2069,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2142,6 +2107,15 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2164,34 +2138,17 @@ PART
 	ACTIONS
 	{
 	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2220,6 +2177,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2247,6 +2208,10 @@ PART
 	IGNORE_THIS_NODE
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2271,6 +2236,10 @@ PART
 	}
 	IGNORE_THIS_NODE
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2540,6 +2509,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleGenerator
@@ -2587,55 +2559,6 @@ PART
 			}
 		}
 	}
-	MODULE
-	{
-		name = KASModuleGrab
-		isEnabled = True
-		grabbed = False
-		evaHolderVesselName = 
-		EVENTS
-		{
-			ContextMenuGrab
-			{
-				active = True
-				guiActive = False
-				guiIcon = Grab
-				guiName = Grab
-				category = Grab
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuDrop
-			{
-				active = True
-				guiActive = False
-				guiIcon = Drop
-				guiName = Drop
-				category = Drop
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			ContextMenuEvaAttach
-			{
-				active = True
-				guiActive = False
-				guiIcon = Attach
-				guiName = Attach
-				category = Attach
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
-	}
 }
 PART
 {
@@ -2658,6 +2581,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -2707,8 +2633,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2734,6 +2661,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleReactionWheel
@@ -2781,8 +2711,9 @@ PART
 		{
 		}
 	}
-	IGNORE_THIS_NODE
+	MODULE
 	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2804,6 +2735,9 @@ PART
 	{
 	}
 	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
 	{
 	}
 	MODULE
@@ -2846,17 +2780,18 @@ PART
 	}
 	MODULE
 	{
-		name = AtmosphericIntake
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = AtmosphericIntake
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{
@@ -2900,6 +2835,9 @@ PART
 	ACTIONS
 	{
 	}
+	IGNORE_THIS_NODE
+	{
+	}
 	MODULE
 	{
 		name = ModuleResourceIntake
@@ -2940,17 +2878,18 @@ PART
 	}
 	MODULE
 	{
-		name = AtmosphericIntake
-		isEnabled = True
-		EVENTS
+		name = ModuleConfigBackup
+		MODULE
 		{
+			name = AtmosphericIntake
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
 		}
-		ACTIONS
-		{
-		}
-	}
-	IGNORE_THIS_NODE
-	{
 	}
 	RESOURCE
 	{

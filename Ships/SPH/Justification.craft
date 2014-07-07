@@ -256,6 +256,31 @@ PART
 	}
 	MODULE
 	{
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = RasterPropMonitorComputer
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -279,6 +304,10 @@ PART
 		SubOrbited
 		{
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -370,6 +399,10 @@ PART
 		ACTIONS
 		{
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -535,29 +568,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -583,29 +599,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -630,6 +629,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -842,29 +845,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1364,6 +1350,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -1402,6 +1397,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -1434,6 +1438,15 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -1513,62 +1526,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleEnginesFX
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
@@ -1632,6 +1591,10 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -1666,6 +1629,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -1690,29 +1662,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1738,6 +1693,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -1762,29 +1726,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -1814,6 +1761,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -1884,6 +1835,10 @@ PART
 				actionGroup = None
 			}
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -1961,6 +1916,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2233,6 +2192,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2255,6 +2223,15 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2283,6 +2260,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2306,6 +2292,15 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2331,29 +2326,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2380,6 +2358,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2403,6 +2385,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2425,6 +2411,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2450,29 +2440,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2498,29 +2471,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2550,6 +2506,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -2620,6 +2580,10 @@ PART
 				actionGroup = None
 			}
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -2697,6 +2661,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -2969,6 +2937,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -2991,6 +2968,15 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3019,6 +3005,15 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3042,6 +3037,15 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3067,29 +3071,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3116,6 +3103,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3139,6 +3130,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3161,6 +3156,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3186,29 +3185,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3234,29 +3216,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3282,29 +3247,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3330,29 +3278,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3378,29 +3309,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3426,29 +3340,12 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3473,6 +3370,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3496,6 +3397,10 @@ PART
 	ACTIONS
 	{
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3518,6 +3423,10 @@ PART
 	}
 	ACTIONS
 	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 }
 PART
@@ -3824,6 +3733,10 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -3848,62 +3761,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleEnginesFX
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
@@ -3966,6 +3825,10 @@ PART
 		ACTIONS
 		{
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
@@ -4048,6 +3911,10 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
 }
 PART
 {
@@ -4072,62 +3939,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
+		name = ModuleEnginesFX
+		MM_REINITIALIZE = true
 	}
 	MODULE
 	{
@@ -4190,6 +4003,10 @@ PART
 		ACTIONS
 		{
 		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
 	}
 	RESOURCE
 	{
