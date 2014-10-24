@@ -1,0 +1,2195 @@
+ship = Limpet
+version = 0.23.5
+description = 
+type = VAB
+PART
+{
+	part = mk1pod_4294335558
+	partName = Part
+	pos = -8.173287E-06,20.66167,2.526562E-06
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = KAS.HookSupport_4294315960
+	link = KAS.Pipe1_4294315056
+	link = KAS.Pipe1_4294314924
+	link = spotLight1_4294302028
+	link = fuelTankSmallFlat_4294262020
+	attN = bottom,fuelTankSmallFlat_4294262020
+	attN = top,KAS.HookSupport_4294315960
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		isEnabled = True
+		FuelPanelVisible = False
+		TransferRunning = False
+		EVENTS
+		{
+			ToggleFuelPanel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Fuel Panel
+				guiName = Toggle Fuel Panel
+				category = Toggle Fuel Panel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeactivateFuelPanel
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+		TransfersFrom
+		{
+		}
+		TransfersTo
+		{
+		}
+	}
+	MODULE
+	{
+		name = RasterPropMonitorComputer
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 50
+		maxAmount = 50
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 10
+		maxAmount = 10
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KAS.HookSupport_4294315960
+	partName = Part
+	pos = -8.173287E-06,21.33705,2.526562E-06
+	rot = 0,0,1,0
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = KAS.Hook.Magnet_4294315500
+	attN = top,mk1pod_4294335558
+	attN = bottom,KAS.Hook.Magnet_4294315500
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModulePartBay
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuStore
+			{
+				active = True
+				guiActive = False
+				guiIcon = Store
+				guiName = Store
+				category = Store
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.Hook.Magnet_4294315500
+	partName = Part
+	pos = -8.173287E-06,21.6493,2.526562E-06
+	rot = 0,0,1,0
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	attN = top,KAS.HookSupport_4294315960
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModuleMagnet
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuMagnet
+			{
+				active = True
+				guiActive = True
+				guiIcon = Magnet On/Off
+				guiName = Magnet On/Off
+				category = Magnet On/Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupMagnetToggle
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOn
+			{
+				actionGroup = None
+			}
+			ActionGroupMagnetOff
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModulePort
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuPlugUndocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Undocked)
+				guiName = Plug(Undocked)
+				category = Plug(Undocked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuPlugDocked
+			{
+				active = True
+				guiActive = False
+				guiIcon = Plug(Docked)
+				guiName = Plug(Docked)
+				category = Plug(Docked)
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnplug
+			{
+				active = True
+				guiActive = True
+				guiIcon = Unplug
+				guiName = Unplug
+				category = Unplug
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupUnplug
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = KASModuleGrab
+		isEnabled = True
+		grabbed = False
+		evaHolderVesselName = 
+		EVENTS
+		{
+			ContextMenuGrab
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab
+				guiName = Grab
+				category = Grab
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuDrop
+			{
+				active = True
+				guiActive = False
+				guiIcon = Drop
+				guiName = Drop
+				category = Drop
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEvaAttach
+			{
+				active = True
+				guiActive = False
+				guiIcon = Attach
+				guiName = Attach
+				category = Attach
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.Pipe1_4294315056
+	partName = Part
+	pos = -0.4022383,21.12749,2.548669E-06
+	rot = 0.4006364,-0.5826582,0.4006363,0.5826582
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KAS.Pipe1_4294314924
+	srfN = srfAttach,mk1pod_4294335558
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASModuleGrab
+		isEnabled = True
+		grabbed = False
+		evaHolderVesselName = 
+		EVENTS
+		{
+			ContextMenuGrab
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab
+				guiName = Grab
+				category = Grab
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuDrop
+			{
+				active = True
+				guiActive = False
+				guiIcon = Drop
+				guiName = Drop
+				category = Drop
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEvaAttach
+			{
+				active = True
+				guiActive = False
+				guiIcon = Attach
+				guiName = Attach
+				category = Attach
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.Pipe1_4294314924
+	partName = Part
+	pos = 0.4022219,21.12749,2.469291E-06
+	rot = 0.4006363,0.5826582,-0.4006364,0.5826582
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KAS.Pipe1_4294315056
+	srfN = srfAttach,mk1pod_4294335558
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModuleStrut
+		isEnabled = True
+		pumpFuel = False
+		EVENTS
+		{
+			ContextMenuTogglePump
+			{
+				active = False
+				guiActive = True
+				guiIcon = Pump Here
+				guiName = Pump Here
+				category = Pump Here
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuLink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Link
+				guiName = Link
+				category = Link
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuUnlink
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unlink
+				guiName = Unlink
+				category = Unlink
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASModuleGrab
+		isEnabled = True
+		grabbed = False
+		evaHolderVesselName = 
+		EVENTS
+		{
+			ContextMenuGrab
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab
+				guiName = Grab
+				category = Grab
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuDrop
+			{
+				active = True
+				guiActive = False
+				guiIcon = Drop
+				guiName = Drop
+				category = Drop
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEvaAttach
+			{
+				active = True
+				guiActive = False
+				guiIcon = Attach
+				guiName = Attach
+				category = Attach
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = spotLight1_4294302028
+	partName = Part
+	pos = -8.173773E-06,21.22456,0.5159554
+	rot = 0.9902983,-3.70449E-08,8.544008E-09,0.1389579
+	attRot = 0,-0.04361939,0.9990482,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,mk1pod_4294335558
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 0.3
+		lightB = 0.3
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTankSmallFlat_4294262020
+	partName = Part
+	pos = -8.173287E-06,19.94413,2.526562E-06
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = adapterSmallMiniTall_4294322240
+	link = ladder1_4294261654
+	link = ladder1_4294236708
+	link = ladder1_4294236638
+	link = ladder1_4294236576
+	attN = top,mk1pod_4294335558
+	attN = bottom,adapterSmallMiniTall_4294322240
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 45
+		maxAmount = 45
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 55
+		maxAmount = 55
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = adapterSmallMiniTall_4294322240
+	partName = Part
+	pos = -8.173287E-06,19.25663,2.526562E-06
+	rot = 0,0,1,0
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = tinyBrayton_4294295244
+	attN = top,tinyBrayton_4294295244
+	attN = bottom,fuelTankSmallFlat_4294262020
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = tinyBrayton_4294295244
+	partName = Part
+	pos = -8.173287E-06,18.56913,2.526562E-06
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = FusionReactor0625_4294296380
+	link = KAS.ContainerBay1_4294312758
+	link = KAS.ContainerBay1_4294261330
+	link = radiator0_4294233200
+	link = radiator0_4294232930
+	attN = top,adapterSmallMiniTall_4294322240
+	attN = bottom,FusionReactor0625_4294296380
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FNGenerator
+		isEnabled = True
+		IsEnabled = True
+		generatorInit = False
+		isupgraded = True
+		chargedParticleMode = True
+		EVENTS
+		{
+			ActivateGenerator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeactivateGenerator
+			{
+				active = False
+				guiActive = True
+				guiIcon = Deactivate Generator
+				guiName = Deactivate Generator
+				category = Deactivate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetrofitGenerator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retrofit
+				guiName = Retrofit
+				category = Retrofit
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			EditorSwapType
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Swap Type
+				guiName = Swap Type
+				category = Swap Type
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActivateGeneratorAction
+			{
+				actionGroup = None
+			}
+			DeactivateGeneratorAction
+			{
+				actionGroup = None
+			}
+			ToggleGeneratorAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = Megajoules
+		amount = 0
+		maxAmount = 1250
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = FusionReactor0625_4294296380
+	partName = Part
+	pos = -8.173287E-06,17.95413,2.526562E-06
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = FNSmallerAugmentedArcjet_4294268836
+	link = radialRCSTank_4294259262
+	link = radialRCSTank_4294259140
+	attN = top,tinyBrayton_4294295244
+	attN = bottom,FNSmallerAugmentedArcjet_4294268836
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FNFusionReactor
+		isEnabled = True
+		fuel_mode = 0
+		IsEnabled = True
+		isupgraded = True
+		breedtritium = False
+		last_active_time = 0
+		ongoing_consumption_rate = 0
+		reactorInit = False
+		startDisabled = False
+		EVENTS
+		{
+			SwapFuelMode
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Swap Fuel Mode
+				guiName = Swap Fuel Mode
+				category = Swap Fuel Mode
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ActivateReactor
+			{
+				active = False
+				guiActive = True
+				guiIcon = Activate Reactor
+				guiName = Activate Reactor
+				category = Activate Reactor
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeactivateReactor
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deactivate Reactor
+				guiName = Deactivate Reactor
+				category = Deactivate Reactor
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeactivateReactorVAB
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable Reactor
+				guiName = Disable Reactor
+				category = Disable Reactor
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ActivateReactorVAB
+			{
+				active = True
+				guiActive = False
+				guiIcon = Enable Reactor
+				guiName = Enable Reactor
+				category = Enable Reactor
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			BreedTritium
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable Tritium Breeding
+				guiName = Enable Tritium Breeding
+				category = Enable Tritium Breeding
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopBreedTritium
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable Tritium Breeding
+				guiName = Disable Tritium Breeding
+				category = Disable Tritium Breeding
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetrofitReactor
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retrofit
+				guiName = Retrofit
+				category = Retrofit
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActivateReactorAction
+			{
+				actionGroup = None
+			}
+			DeactivateReactorAction
+			{
+				actionGroup = None
+			}
+			ToggleReactorAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleElementRadioactiveDecay
+		isEnabled = True
+		lastActiveTime = 1
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ThermalPower
+		amount = 0
+		maxAmount = 2200
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = ChargedParticles
+		amount = 0
+		maxAmount = 2200
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = WasteHeat
+		amount = 0
+		maxAmount = 22000
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Deuterium
+		amount = 3.125
+		maxAmount = 3.125
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Tritium
+		amount = 3.125
+		maxAmount = 3.125
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Helium-3
+		amount = 0
+		maxAmount = 50
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = FNSmallerAugmentedArcjet_4294268836
+	partName = Part
+	pos = -8.173287E-06,17.45413,2.526562E-06
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	attN = top,FusionReactor0625_4294296380
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ElectricEngineController
+		isEnabled = True
+		IsEnabled = False
+		isupgraded = False
+		fuel_mode = 1
+		engineInit = False
+		EVENTS
+		{
+			TogglePropellant
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Propellant
+				guiName = Toggle Propellant
+				category = Toggle Propellant
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetrofitEngine
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retrofit
+				guiName = Retrofit
+				category = Retrofit
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			TogglePropellantAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radialRCSTank_4294259262
+	partName = Part
+	pos = 0.5285188,17.92378,2.518725E-06
+	rot = -0.5,0.5,0.5,-0.5
+	attRot = 0,0,0.7071068,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = radialRCSTank_4294259140
+	srfN = srfAttach,FusionReactor0625_4294296380
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 40
+		maxAmount = 40
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialRCSTank_4294259140
+	partName = Part
+	pos = -0.5285351,17.92378,2.580603E-06
+	rot = 0.5,-0.5,0.5,-0.5
+	attRot = 0,0,0.7071068,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = radialRCSTank_4294259262
+	srfN = srfAttach,FusionReactor0625_4294296380
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 40
+		maxAmount = 40
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KAS.ContainerBay1_4294312758
+	partName = Part
+	pos = 0.7250227,18.5835,3.832817E-05
+	rot = 0.4957485,0.5062954,-0.4936244,0.5042158
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = KAS.Container1_4294312168
+	sym = KAS.ContainerBay1_4294261330
+	srfN = srfAttach,tinyBrayton_4294295244
+	attN = bottom,KAS.Container1_4294312168
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModulePartBay
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuStore
+			{
+				active = True
+				guiActive = False
+				guiIcon = Store
+				guiName = Store
+				category = Store
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.Container1_4294312168
+	partName = Part
+	pos = 0.5209681,18.57919,2.015677E-05
+	rot = -0.4946654,-0.5052789,-0.4947098,0.5052344
+	attRot = -0.4999999,-0.4999999,-0.4999999,0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = KAS.Container1_4294260960
+	attN = bottom,KAS.ContainerBay1_4294312758
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModuleContainer
+		isEnabled = True
+		EVENTS
+		{
+			EditContents
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Edit Container
+				guiName = Edit Container
+				category = Edit Container
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuOpenContainer
+			{
+				active = True
+				guiActive = True
+				guiIcon = Open container
+				guiName = Open container
+				category = Open container
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASModuleGrab
+		isEnabled = True
+		grabbed = False
+		evaHolderVesselName = 
+		EVENTS
+		{
+			ContextMenuGrab
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab
+				guiName = Grab
+				category = Grab
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuDrop
+			{
+				active = True
+				guiActive = False
+				guiIcon = Drop
+				guiName = Drop
+				category = Drop
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEvaAttach
+			{
+				active = True
+				guiActive = False
+				guiIcon = Attach
+				guiName = Attach
+				category = Attach
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.ContainerBay1_4294261330
+	partName = Part
+	pos = -0.725039,18.5835,-3.321167E-05
+	rot = -0.4936244,0.5042158,-0.4957484,-0.5062954
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = KAS.Container1_4294260960
+	sym = KAS.ContainerBay1_4294312758
+	srfN = srfAttach,tinyBrayton_4294295244
+	attN = bottom,KAS.Container1_4294260960
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModulePartBay
+		isEnabled = True
+		EVENTS
+		{
+			ContextMenuStore
+			{
+				active = True
+				guiActive = False
+				guiIcon = Store
+				guiName = Store
+				category = Store
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuRelease
+			{
+				active = True
+				guiActive = True
+				guiIcon = Release
+				guiName = Release
+				category = Release
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ActionGroupRelease
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KAS.Container1_4294260960
+	partName = Part
+	pos = -0.5209846,18.57919,-1.511286E-05
+	rot = -0.4947098,0.5052344,0.4946654,0.5052788
+	attRot = -0.4999999,-0.4999999,-0.4999999,0.4999999
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = KAS.Container1_4294312168
+	attN = bottom,KAS.ContainerBay1_4294261330
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = KASModuleContainer
+		isEnabled = True
+		EVENTS
+		{
+			EditContents
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Edit Container
+				guiName = Edit Container
+				category = Edit Container
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuOpenContainer
+			{
+				active = True
+				guiActive = True
+				guiIcon = Open container
+				guiName = Open container
+				category = Open container
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = KASModuleGrab
+		isEnabled = True
+		grabbed = False
+		evaHolderVesselName = 
+		EVENTS
+		{
+			ContextMenuGrab
+			{
+				active = True
+				guiActive = False
+				guiIcon = Grab
+				guiName = Grab
+				category = Grab
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuDrop
+			{
+				active = True
+				guiActive = False
+				guiIcon = Drop
+				guiName = Drop
+				category = Drop
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ContextMenuEvaAttach
+			{
+				active = True
+				guiActive = False
+				guiIcon = Attach
+				guiName = Attach
+				category = Attach
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = ladder1_4294261654
+	partName = Strut
+	pos = -8.226645E-06,20.13812,-0.6103396
+	rot = 1.414044E-07,0.7071068,-1.842816E-07,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = ladder1_4294236708
+	srfN = srfAttach,fuelTankSmallFlat_4294262020
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = ladder1_4294236708
+	partName = Strut
+	pos = -8.06657E-06,20.13812,0.6103446
+	rot = -1.842816E-07,-0.7071069,-1.414044E-07,-0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = ladder1_4294261654
+	srfN = srfAttach,fuelTankSmallFlat_4294262020
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = ladder1_4294236638
+	partName = Strut
+	pos = -8.22774E-06,19.6637,-0.6228734
+	rot = 1.414044E-07,0.7071068,-1.842816E-07,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = ladder1_4294236576
+	srfN = srfAttach,fuelTankSmallFlat_4294262020
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = ladder1_4294236576
+	partName = Strut
+	pos = -8.06438E-06,19.6637,0.6228784
+	rot = -1.842816E-07,-0.7071069,-1.414044E-07,-0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = ladder1_4294236638
+	srfN = srfAttach,fuelTankSmallFlat_4294262020
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radiator0_4294233200
+	partName = Part
+	pos = -8.202349E-06,18.69332,-0.3817893
+	rot = -0.008960214,0.7070814,0.005987024,-0.7070501
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = radiator0_4294232930
+	srfN = srfAttach,tinyBrayton_4294295244
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FNRadiator
+		isEnabled = True
+		radiatorIsEnabled = False
+		isupgraded = True
+		radiatorInit = False
+		EVENTS
+		{
+			DeployRadiator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Radiator
+				guiName = Deploy Radiator
+				category = Deploy Radiator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractRadiator
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Radiator
+				guiName = Retract Radiator
+				category = Retract Radiator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetrofitRadiator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retrofit
+				guiName = Retrofit
+				category = Retrofit
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployRadiatorAction
+			{
+				actionGroup = None
+			}
+			RetractRadiatorAction
+			{
+				actionGroup = None
+			}
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = WasteHeat
+		amount = 0
+		maxAmount = 625000
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radiator0_4294232930
+	partName = Part
+	pos = -8.110847E-06,18.69332,0.3817944
+	rot = 0.005987024,-0.7070501,0.008960214,-0.7070814
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = radiator0_4294233200
+	srfN = srfAttach,tinyBrayton_4294295244
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = FNRadiator
+		isEnabled = True
+		radiatorIsEnabled = False
+		isupgraded = True
+		radiatorInit = False
+		EVENTS
+		{
+			DeployRadiator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Radiator
+				guiName = Deploy Radiator
+				category = Deploy Radiator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetractRadiator
+			{
+				active = False
+				guiActive = True
+				guiIcon = Retract Radiator
+				guiName = Retract Radiator
+				category = Retract Radiator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RetrofitRadiator
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retrofit
+				guiName = Retrofit
+				category = Retrofit
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployRadiatorAction
+			{
+				actionGroup = None
+			}
+			RetractRadiatorAction
+			{
+				actionGroup = None
+			}
+			ToggleRadiatorAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = WasteHeat
+		amount = 0
+		maxAmount = 625000
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}

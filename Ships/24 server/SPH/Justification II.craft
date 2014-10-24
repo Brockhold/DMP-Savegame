@@ -1,0 +1,8543 @@
+ship = Justification II
+version = 0.23.5
+description = 
+type = SPH
+PART
+{
+	part = Mark1Cockpit_4294605602
+	partName = Part
+	pos = 0.1165634,6.153121,-0.4115819
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = mk2SpacePlaneAdapter_4294605524
+	link = rtg_4294605498
+	link = rtg_4294605470
+	link = spotLight1_4294604472
+	link = AdvancedCanard_4294600920
+	link = AdvancedCanard_4294600882
+	attN = bottom,mk2SpacePlaneAdapter_4294605524
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = Active
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.3
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = RasterPropMonitorComputer
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 50
+		maxAmount = 50
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 7.5
+		maxAmount = 7.5
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = mk2SpacePlaneAdapter_4294605524
+	partName = Part
+	pos = 0.1165634,6.153121,-1.630333
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = mk2Fuselage_4294605442
+	link = smallHardpoint_4294604500
+	attN = top,Mark1Cockpit_4294605602
+	attN = bottom,mk2Fuselage_4294605442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 80
+		maxAmount = 80
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = rtg_4294605498
+	partName = Part
+	pos = -0.3201802,5.900966,-0.1321782
+	rot = 0.565591,-0.324401,-0.3777181,0.6574192
+	attRot = -0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294605470
+	srfN = srfAttach,Mark1Cockpit_4294605602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = rtg_4294605470
+	partName = Part
+	pos = 0.5533071,5.900966,-0.1321782
+	rot = 0.565591,0.324401,0.3777181,0.6574192
+	attRot = 0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294605498
+	srfN = srfAttach,Mark1Cockpit_4294605602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = mk2Fuselage_4294605442
+	partName = Part
+	pos = 0.1165634,6.153121,-4.511613
+	rot = 0.7071068,0,0,0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = mk2SpacePlaneAdapter_4294605412
+	link = MK1Fuselage_4294605256
+	link = MK1Fuselage_4294605056
+	link = smallHardpoint_4294604856
+	link = fuelLine_4294604828
+	link = fuelLine_4294604748
+	attN = top,mk2SpacePlaneAdapter_4294605524
+	attN = bottom,mk2SpacePlaneAdapter_4294605412
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 160
+		maxAmount = 160
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = mk2SpacePlaneAdapter_4294605412
+	partName = Part
+	pos = 0.1165634,6.153121,-7.397886
+	rot = -1.256074E-15,-0.7071068,0.7071069,-1.256074E-15
+	attRot = 0,-0.9999999,5.960464E-08,-1.776357E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = fuelTankSmallFlat_4294605386
+	attN = top,fuelTankSmallFlat_4294605386
+	attN = bottom,mk2Fuselage_4294605442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 80
+		maxAmount = 80
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTankSmallFlat_4294605386
+	partName = Part
+	pos = 0.1165634,6.153121,-8.660396
+	rot = 0.7071069,1.550747E-21,1.700483E-21,0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = turboFanEngine_4294605356
+	link = tailfin_4294600844
+	link = tailfin_4294600770
+	attN = top,mk2SpacePlaneAdapter_4294605412
+	attN = bottom,turboFanEngine_4294605356
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 45
+		maxAmount = 45
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 55
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = turboFanEngine_4294605356
+	partName = Part
+	pos = 0.1165634,6.153121,-10.38911
+	rot = 0.7071068,5.756589E-28,5.667338E-28,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 10
+	dstg = 0
+	sidx = 0
+	sqor = 10
+	attm = 0
+	attN = top,fuelTankSmallFlat_4294605386
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MK1Fuselage_4294605256
+	partName = Part
+	pos = -1.733108,6.153121,-4.776195
+	rot = -0.5000001,0.5000001,0.5000001,-0.5000001
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTankSmallFlat_4294605226
+	link = ramAirIntake_4294605096
+	link = sweptWing_4294604668
+	link = sweptWing_4294604612
+	link = smallHardpoint_4294604556
+	link = strutCube_4294604436
+	sym = MK1Fuselage_4294605056
+	srfN = srfAttach,mk2Fuselage_4294605442
+	attN = top,ramAirIntake_4294605096
+	attN = bottom,fuelTankSmallFlat_4294605226
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTankSmallFlat_4294605226
+	partName = Part
+	pos = -1.733108,6.153121,-6.032425
+	rot = -0.7071069,-1.053672E-08,1.053672E-08,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = turboFanEngine_4294605196
+	sym = fuelTankSmallFlat_4294605026
+	attN = top,MK1Fuselage_4294605256
+	attN = bottom,turboFanEngine_4294605196
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 45
+		maxAmount = 45
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 55
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = turboFanEngine_4294605196
+	partName = Part
+	pos = -1.733108,6.153121,-7.761215
+	rot = -0.7071068,-2.107343E-08,2.107343E-08,-0.707107
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 10
+	dstg = 0
+	sidx = 1
+	sqor = 10
+	attm = 0
+	sym = turboFanEngine_4294604996
+	attN = top,fuelTankSmallFlat_4294605226
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = ramAirIntake_4294605096
+	partName = Part
+	pos = -1.733108,6.153121,-3.844946
+	rot = -0.5000001,0.5000001,0.4999999,-0.5000001
+	attRot = 3.552713E-15,4.214684E-08,0.7071067,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = ramAirIntake_4294604896
+	attN = bottom01,MK1Fuselage_4294605256
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceIntake
+		isEnabled = True
+		intakeEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = AtmosphericIntake
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = IntakeAir
+		amount = 0.2
+		maxAmount = 0.2
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = IntakeAtm
+		amount = 0.2
+		maxAmount = 0.2
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MK1Fuselage_4294605056
+	partName = Part
+	pos = 1.966234,6.153121,-4.776195
+	rot = 0.5000001,0.5000001,0.5000001,0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTankSmallFlat_4294605026
+	link = ramAirIntake_4294604896
+	link = sweptWing_4294604640
+	link = sweptWing_4294604584
+	link = smallHardpoint_4294604528
+	link = strutCube_4294603598
+	sym = MK1Fuselage_4294605256
+	srfN = srfAttach,mk2Fuselage_4294605442
+	attN = top,ramAirIntake_4294604896
+	attN = bottom,fuelTankSmallFlat_4294605026
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTankSmallFlat_4294605026
+	partName = Part
+	pos = 1.966234,6.153121,-6.032425
+	rot = 0.7071068,-2.850849E-07,3.693785E-07,0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = turboFanEngine_4294604996
+	sym = fuelTankSmallFlat_4294605226
+	attN = top,MK1Fuselage_4294605056
+	attN = bottom,turboFanEngine_4294604996
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 45
+		maxAmount = 45
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 0
+		maxAmount = 55
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = turboFanEngine_4294604996
+	partName = Part
+	pos = 1.966234,6.153121,-7.761215
+	rot = 0.7071069,-6.322021E-08,-2.10735E-08,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 10
+	dstg = 0
+	sidx = 2
+	sqor = 10
+	attm = 0
+	sym = turboFanEngine_4294605196
+	attN = top,fuelTankSmallFlat_4294605026
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ModuleSabreHeating
+			isEnabled = True
+			IsEnabled = False
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = ramAirIntake_4294604896
+	partName = Part
+	pos = 1.966234,6.153121,-3.844946
+	rot = 0.5000001,0.5000001,0.5,0.4999999
+	attRot = 3.552713E-15,4.214684E-08,0.7071067,-0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = ramAirIntake_4294605096
+	attN = bottom01,MK1Fuselage_4294605056
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleResourceIntake
+		isEnabled = True
+		intakeEnabled = True
+		EVENTS
+		{
+			Deactivate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Close Intake
+				guiName = Close Intake
+				category = Close Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Activate
+			{
+				active = False
+				guiActive = True
+				guiIcon = Open Intake
+				guiName = Open Intake
+				category = Open Intake
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = AtmosphericIntake
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = IntakeAir
+		amount = 0.2
+		maxAmount = 0.2
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = IntakeAtm
+		amount = 0.2
+		maxAmount = 0.2
+		flowState = True
+		isTweakable = False
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = smallHardpoint_4294604856
+	partName = Strut
+	pos = 0.1165632,7.29736,-4.291004
+	rot = 0.5000002,-0.4999999,-0.5000002,0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,mk2Fuselage_4294605442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = fuelLine_4294604828
+	partName = FuelLine
+	pos = -0.7375979,6.646271,-4.11702
+	rot = -0.6830128,0.1830125,0.1830128,-0.6830128
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: MK1Fuselage_10; pos: -0.2611809,-1.336483,0.4360371; dir: -0.182661,-0.9346875,0.3049494; rot: 0.8660259,2.950279E-07,-0.4999992,4.214685E-08
+	sym = fuelLine_4294604748
+	srfN = srfAttach,mk2Fuselage_4294605442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = fuelLine_4294604748
+	partName = FuelLine
+	pos = 0.9707246,6.646271,-4.11702
+	rot = -0.1830128,0.6830128,0.6830128,-0.1830125
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: MK1Fuselage_59; pos: -0.261181,-1.336479,-0.4360366; dir: -0.182661,-0.9346876,-0.3049494; rot: -0.8660259,6.322027E-08,-0.4999993,-8.42937E-07
+	sym = fuelLine_4294604828
+	srfN = srfAttach,mk2Fuselage_4294605442
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sweptWing_4294604668
+	partName = Winglet
+	pos = -2.333727,6.153121,-4.846561
+	rot = 0,0.7071069,0.7071069,0
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294601768
+	sym = sweptWing_4294604640
+	srfN = srfAttach,MK1Fuselage_4294605256
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294604640
+	partName = Winglet
+	pos = 2.566853,6.153121,-4.846561
+	rot = -0.7071069,2.59647E-07,-3.439406E-07,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294601712
+	sym = sweptWing_4294604668
+	srfN = srfAttach,MK1Fuselage_4294605056
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294604612
+	partName = Winglet
+	pos = -2.161499,6.153121,-5.685565
+	rot = -5.480015E-10,0.7071069,0.7071069,5.480015E-10
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294601824
+	link = StandardCtrlSrf_4294601112
+	link = StandardCtrlSrf_4294601016
+	sym = sweptWing_4294604584
+	srfN = srfAttach,MK1Fuselage_4294605256
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294604584
+	partName = Winglet
+	pos = 2.394625,6.153121,-5.685565
+	rot = -0.7071069,2.58551E-07,-3.428446E-07,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sweptWing_4294601796
+	link = StandardCtrlSrf_4294601064
+	link = StandardCtrlSrf_4294600968
+	sym = sweptWing_4294604612
+	srfN = srfAttach,MK1Fuselage_4294605056
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallHardpoint_4294604556
+	partName = Strut
+	pos = -1.733108,5.296082,-5.163608
+	rot = -0.5,-0.5000001,-0.5000001,-0.5
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = SmallGearBay_4294602584
+	sym = smallHardpoint_4294604528
+	srfN = srfAttach,MK1Fuselage_4294605256
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallHardpoint_4294604528
+	partName = Strut
+	pos = 1.966234,5.296086,-5.163608
+	rot = 0.5000002,0.5,0.5,0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = SmallGearBay_4294602408
+	sym = smallHardpoint_4294604556
+	srfN = srfAttach,MK1Fuselage_4294605056
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallHardpoint_4294604500
+	partName = Strut
+	pos = 0.116565,5.30901,-1.101936
+	rot = 0.4979858,0.502332,0.4976602,0.5020033
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = SmallGearBay_4294602760
+	srfN = srfAttach,mk2SpacePlaneAdapter_4294605524
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = spotLight1_4294604472
+	partName = Part
+	pos = 0.1165635,5.487425,0.1583865
+	rot = -0.6666113,-5.279649E-08,6.874424E-08,0.7454057
+	attRot = -2.318611E-16,-0.9914448,-0.1305261,-1.76116E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,Mark1Cockpit_4294605602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = True
+		lightR = 1
+		lightG = 0
+		lightB = 0
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = strutCube_4294604436
+	partName = Part
+	pos = -1.327638,5.557662,-4.994297
+	rot = -0.75374,-0.3773343,0.470948,-0.2601981
+	attRot = -0.1294417,0.5222452,0.1693946,0.8257183
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = stackDecouplerMini_4294604414
+	sym = strutCube_4294603598
+	srfN = srfAttach,MK1Fuselage_4294605256
+	attN = top,stackDecouplerMini_4294604414
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294604414
+	partName = Part
+	pos = -1.161078,5.438993,-4.986761
+	rot = -0.01893565,-0.003465801,0.4579579,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 1
+	sidx = 0
+	sqor = 0
+	attm = 0
+	link = sepMotor1_4294604388
+	link = sepMotor1_4294604350
+	link = stackDecouplerMini_4294604312
+	sym = stackDecouplerMini_4294603576
+	attN = bottom,stackDecouplerMini_4294604312
+	attN = top,strutCube_4294604436
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294604388
+	partName = Part
+	pos = -1.32444,5.208189,-5.010241
+	rot = -0.2042029,-0.6810967,-0.6656269,-0.2266052
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 2
+	sidx = 1
+	sqor = 0
+	attm = 1
+	sym = sepMotor1_4294603550
+	srfN = srfAttach,stackDecouplerMini_4294604414
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294604350
+	partName = Part
+	pos = -0.9962289,5.667852,-5.026657
+	rot = 0.6656273,-0.2266048,-0.2042032,0.6810961
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 2
+	sidx = 2
+	sqor = 0
+	attm = 1
+	sym = sepMotor1_4294603512
+	srfN = srfAttach,stackDecouplerMini_4294604414
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294604312
+	partName = Part
+	pos = -1.03751,5.350965,-4.981171
+	rot = -0.01893568,-0.003465906,0.4579577,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 1
+	dstg = 3
+	sidx = 0
+	sqor = 1
+	attm = 0
+	link = sepMotor1_4294604286
+	link = sepMotor1_4294604248
+	link = stackDecouplerMini_4294604210
+	sym = stackDecouplerMini_4294603474
+	attN = bottom,stackDecouplerMini_4294604210
+	attN = top,stackDecouplerMini_4294604414
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294604286
+	partName = Part
+	pos = -1.200876,5.120162,-5.004652
+	rot = -0.2042029,-0.6810968,-0.6656268,-0.2266049
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 1
+	dstg = 4
+	sidx = 1
+	sqor = 1
+	attm = 1
+	sym = sepMotor1_4294603448
+	srfN = srfAttach,stackDecouplerMini_4294604312
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294604248
+	partName = Part
+	pos = -0.8726653,5.579823,-5.021067
+	rot = 0.665627,-0.2266048,-0.204203,0.6810966
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 1
+	dstg = 4
+	sidx = 2
+	sqor = 1
+	attm = 1
+	sym = sepMotor1_4294603410
+	srfN = srfAttach,stackDecouplerMini_4294604312
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294604210
+	partName = Part
+	pos = -0.9139447,5.262935,-4.975582
+	rot = -0.01893595,-0.003466174,0.4579577,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 0
+	sqor = 2
+	attm = 0
+	link = sepMotor1_4294604184
+	link = sepMotor1_4294604146
+	link = stackDecouplerMini_4294604108
+	sym = stackDecouplerMini_4294603372
+	attN = bottom,stackDecouplerMini_4294604108
+	attN = top,stackDecouplerMini_4294604312
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294604184
+	partName = Part
+	pos = -1.07731,5.032131,-4.999062
+	rot = -0.204203,-0.6810969,-0.6656267,-0.2266045
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 2
+	dstg = 6
+	sidx = 1
+	sqor = 2
+	attm = 1
+	sym = sepMotor1_4294603346
+	srfN = srfAttach,stackDecouplerMini_4294604210
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294604146
+	partName = Part
+	pos = -0.7490964,5.491789,-5.015476
+	rot = 0.6656268,-0.226605,-0.2042034,0.6810966
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 2
+	dstg = 6
+	sidx = 2
+	sqor = 2
+	attm = 1
+	sym = sepMotor1_4294603308
+	srfN = srfAttach,stackDecouplerMini_4294604210
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294604108
+	partName = Part
+	pos = -0.7903741,5.174891,-4.969992
+	rot = -0.01893541,-0.003465727,0.4579579,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 3
+	dstg = 7
+	sidx = 0
+	sqor = 3
+	attm = 0
+	link = sepMotor1_4294604082
+	link = sepMotor1_4294604044
+	link = stackDecouplerMini_4294604006
+	sym = stackDecouplerMini_4294603270
+	attN = bottom,stackDecouplerMini_4294604006
+	attN = top,stackDecouplerMini_4294604210
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294604082
+	partName = Part
+	pos = -0.9537389,4.944095,-4.993473
+	rot = -0.2042028,-0.6810968,-0.6656269,-0.2266047
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 3
+	dstg = 8
+	sidx = 1
+	sqor = 3
+	attm = 1
+	sym = sepMotor1_4294603244
+	srfN = srfAttach,stackDecouplerMini_4294604108
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294604044
+	partName = Part
+	pos = -0.6255326,5.403749,-5.009887
+	rot = 0.6656269,-0.2266053,-0.2042031,0.6810966
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 3
+	dstg = 8
+	sidx = 2
+	sqor = 3
+	attm = 1
+	sym = sepMotor1_4294603206
+	srfN = srfAttach,stackDecouplerMini_4294604108
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294604006
+	partName = Part
+	pos = -0.6668081,5.086861,-4.964401
+	rot = -0.01893589,-0.003466204,0.4579578,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 4
+	dstg = 9
+	sidx = 0
+	sqor = 4
+	attm = 0
+	link = sepMotor1_4294603980
+	link = sepMotor1_4294603942
+	link = stackDecouplerMini_4294603904
+	sym = stackDecouplerMini_4294603168
+	attN = bottom,stackDecouplerMini_4294603904
+	attN = top,stackDecouplerMini_4294604108
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603980
+	partName = Part
+	pos = -0.8301694,4.856061,-4.987882
+	rot = -0.2042029,-0.6810969,-0.6656266,-0.2266048
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 4
+	dstg = 10
+	sidx = 1
+	sqor = 4
+	attm = 1
+	sym = sepMotor1_4294603142
+	srfN = srfAttach,stackDecouplerMini_4294604006
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603942
+	partName = Part
+	pos = -0.5019603,5.315722,-5.004296
+	rot = 0.6656272,-0.2266045,-0.2042033,0.6810962
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 4
+	dstg = 10
+	sidx = 2
+	sqor = 4
+	attm = 1
+	sym = sepMotor1_4294603104
+	srfN = srfAttach,stackDecouplerMini_4294604006
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603904
+	partName = Part
+	pos = -0.5432386,4.998827,-4.958811
+	rot = -0.0189358,-0.003466204,0.457958,0.8887656
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 5
+	dstg = 11
+	sidx = 0
+	sqor = 5
+	attm = 0
+	link = sepMotor1_4294603878
+	link = sepMotor1_4294603840
+	link = stackDecouplerMini_4294603802
+	sym = stackDecouplerMini_4294603066
+	attN = bottom,stackDecouplerMini_4294603802
+	attN = top,stackDecouplerMini_4294604006
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603878
+	partName = Part
+	pos = -0.7066016,4.76803,-4.982292
+	rot = -0.2042033,-0.6810961,-0.6656277,-0.2266044
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 5
+	dstg = 12
+	sidx = 1
+	sqor = 5
+	attm = 1
+	sym = sepMotor1_4294603040
+	srfN = srfAttach,stackDecouplerMini_4294603904
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603840
+	partName = Part
+	pos = -0.378392,5.227684,-4.998707
+	rot = 0.6656268,-0.2266047,-0.2042031,0.6810966
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 5
+	dstg = 12
+	sidx = 2
+	sqor = 5
+	attm = 1
+	sym = sepMotor1_4294603002
+	srfN = srfAttach,stackDecouplerMini_4294603904
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603802
+	partName = Part
+	pos = -0.4196712,4.910789,-4.953222
+	rot = -0.01893565,-0.003465697,0.4579578,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 6
+	dstg = 13
+	sidx = 0
+	sqor = 6
+	attm = 0
+	link = sepMotor1_4294603776
+	link = sepMotor1_4294603738
+	link = stackDecouplerMini_4294603700
+	sym = stackDecouplerMini_4294602964
+	attN = bottom,stackDecouplerMini_4294603700
+	attN = top,stackDecouplerMini_4294603904
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603776
+	partName = Part
+	pos = -0.5830302,4.679993,-4.976707
+	rot = -0.2042031,-0.681096,-0.6656277,-0.2266043
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 6
+	dstg = 14
+	sidx = 1
+	sqor = 6
+	attm = 1
+	sym = sepMotor1_4294602938
+	srfN = srfAttach,stackDecouplerMini_4294603802
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603738
+	partName = Part
+	pos = -0.2548288,5.139654,-4.993116
+	rot = 0.6656274,-0.2266053,-0.2042035,0.681096
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 6
+	dstg = 14
+	sidx = 2
+	sqor = 6
+	attm = 1
+	sym = sepMotor1_4294602900
+	srfN = srfAttach,stackDecouplerMini_4294603802
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603700
+	partName = Part
+	pos = -0.2961037,4.822762,-4.947629
+	rot = -0.01893595,-0.003466204,0.4579577,0.8887657
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 7
+	dstg = 15
+	sidx = 0
+	sqor = 7
+	attm = 0
+	link = sepMotor1_4294603674
+	link = sepMotor1_4294603636
+	link = stackDecouplerMini_4294602232
+	sym = stackDecouplerMini_4294602862
+	attN = bottom,stackDecouplerMini_4294602232
+	attN = top,stackDecouplerMini_4294603802
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603674
+	partName = Part
+	pos = -0.4594645,4.591958,-4.971122
+	rot = -0.2042036,-0.6810967,-0.6656266,-0.2266049
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 7
+	dstg = 16
+	sidx = 1
+	sqor = 7
+	attm = 1
+	sym = sepMotor1_4294602836
+	srfN = srfAttach,stackDecouplerMini_4294603700
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603636
+	partName = Part
+	pos = -0.1312622,5.051618,-4.987526
+	rot = 0.6656277,-0.2266044,-0.2042032,0.6810959
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 7
+	dstg = 16
+	sidx = 2
+	sqor = 7
+	attm = 1
+	sym = sepMotor1_4294602798
+	srfN = srfAttach,stackDecouplerMini_4294603700
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutCube_4294603598
+	partName = Part
+	pos = 1.560764,5.557662,-4.994297
+	rot = 0.75374,-0.3773341,0.4709482,0.2601981
+	attRot = 0.1294417,-0.5222452,-0.1693946,0.8257183
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = stackDecouplerMini_4294603576
+	sym = strutCube_4294604436
+	srfN = srfAttach,MK1Fuselage_4294605056
+	attN = top,stackDecouplerMini_4294603576
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603576
+	partName = Part
+	pos = 1.394204,5.438994,-4.986761
+	rot = -0.01893532,0.003465816,-0.4579581,0.8887654
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 1
+	sidx = 3
+	sqor = 0
+	attm = 0
+	link = sepMotor1_4294603550
+	link = sepMotor1_4294603512
+	link = stackDecouplerMini_4294603474
+	sym = stackDecouplerMini_4294604414
+	attN = bottom,stackDecouplerMini_4294603474
+	attN = top,strutCube_4294603598
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603550
+	partName = Part
+	pos = 1.557566,5.208192,-5.010242
+	rot = -0.2042031,0.6810969,0.6656266,-0.2266053
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 2
+	sidx = 4
+	sqor = 0
+	attm = 1
+	sym = sepMotor1_4294604388
+	srfN = srfAttach,stackDecouplerMini_4294603576
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603512
+	partName = Part
+	pos = 1.229355,5.667852,-5.026658
+	rot = 0.6656271,0.2266047,0.2042032,0.6810963
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 0
+	dstg = 2
+	sidx = 5
+	sqor = 0
+	attm = 1
+	sym = sepMotor1_4294604350
+	srfN = srfAttach,stackDecouplerMini_4294603576
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603474
+	partName = Part
+	pos = 1.270636,5.350965,-4.981171
+	rot = -0.01893562,0.003465757,-0.457958,0.8887656
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 1
+	dstg = 3
+	sidx = 3
+	sqor = 1
+	attm = 0
+	link = sepMotor1_4294603448
+	link = sepMotor1_4294603410
+	link = stackDecouplerMini_4294603372
+	sym = stackDecouplerMini_4294604312
+	attN = bottom,stackDecouplerMini_4294603372
+	attN = top,stackDecouplerMini_4294603576
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603448
+	partName = Part
+	pos = 1.434002,5.120162,-5.004652
+	rot = -0.204203,0.681097,0.6656265,-0.2266047
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 1
+	dstg = 4
+	sidx = 4
+	sqor = 1
+	attm = 1
+	sym = sepMotor1_4294604286
+	srfN = srfAttach,stackDecouplerMini_4294603474
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603410
+	partName = Part
+	pos = 1.105794,5.579823,-5.021067
+	rot = 0.6656274,0.2266044,0.2042031,0.6810961
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 1
+	dstg = 4
+	sidx = 5
+	sqor = 1
+	attm = 1
+	sym = sepMotor1_4294604248
+	srfN = srfAttach,stackDecouplerMini_4294603474
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603372
+	partName = Part
+	pos = 1.147071,5.262935,-4.975582
+	rot = -0.01893598,0.00346598,-0.457958,0.8887656
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 3
+	sqor = 2
+	attm = 0
+	link = sepMotor1_4294603346
+	link = sepMotor1_4294603308
+	link = stackDecouplerMini_4294603270
+	sym = stackDecouplerMini_4294604210
+	attN = bottom,stackDecouplerMini_4294603270
+	attN = top,stackDecouplerMini_4294603474
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603346
+	partName = Part
+	pos = 1.310436,5.032131,-4.999062
+	rot = -0.2042031,0.6810971,0.6656266,-0.2266046
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 2
+	dstg = 6
+	sidx = 4
+	sqor = 2
+	attm = 1
+	sym = sepMotor1_4294604184
+	srfN = srfAttach,stackDecouplerMini_4294603372
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603308
+	partName = Part
+	pos = 0.9822233,5.491786,-5.015476
+	rot = 0.6656271,0.2266047,0.2042031,0.6810964
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 2
+	dstg = 6
+	sidx = 5
+	sqor = 2
+	attm = 1
+	sym = sepMotor1_4294604146
+	srfN = srfAttach,stackDecouplerMini_4294603372
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603270
+	partName = Part
+	pos = 1.023504,5.174891,-4.969992
+	rot = -0.01893571,0.003465891,-0.457958,0.8887656
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 3
+	dstg = 7
+	sidx = 3
+	sqor = 3
+	attm = 0
+	link = sepMotor1_4294603244
+	link = sepMotor1_4294603206
+	link = stackDecouplerMini_4294603168
+	sym = stackDecouplerMini_4294604108
+	attN = bottom,stackDecouplerMini_4294603168
+	attN = top,stackDecouplerMini_4294603372
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603244
+	partName = Part
+	pos = 1.186866,4.944096,-4.993474
+	rot = -0.2042028,0.6810969,0.6656265,-0.2266048
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 3
+	dstg = 8
+	sidx = 4
+	sqor = 3
+	attm = 1
+	sym = sepMotor1_4294604082
+	srfN = srfAttach,stackDecouplerMini_4294603270
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603206
+	partName = Part
+	pos = 0.8586598,5.403749,-5.009887
+	rot = 0.6656272,0.2266044,0.2042033,0.6810964
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 3
+	dstg = 8
+	sidx = 5
+	sqor = 3
+	attm = 1
+	sym = sepMotor1_4294604044
+	srfN = srfAttach,stackDecouplerMini_4294603270
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603168
+	partName = Part
+	pos = 0.8999345,5.086862,-4.964401
+	rot = -0.01893601,0.003466174,-0.457958,0.8887655
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 4
+	dstg = 9
+	sidx = 3
+	sqor = 4
+	attm = 0
+	link = sepMotor1_4294603142
+	link = sepMotor1_4294603104
+	link = stackDecouplerMini_4294603066
+	sym = stackDecouplerMini_4294604006
+	attN = bottom,stackDecouplerMini_4294603066
+	attN = top,stackDecouplerMini_4294603270
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603142
+	partName = Part
+	pos = 1.063298,4.856061,-4.987885
+	rot = -0.2042033,0.6810969,0.6656265,-0.226605
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 4
+	dstg = 10
+	sidx = 4
+	sqor = 4
+	attm = 1
+	sym = sepMotor1_4294603980
+	srfN = srfAttach,stackDecouplerMini_4294603168
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603104
+	partName = Part
+	pos = 0.7350877,5.315721,-5.004294
+	rot = 0.6656273,0.2266042,0.2042034,0.6810964
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 4
+	dstg = 10
+	sidx = 5
+	sqor = 4
+	attm = 1
+	sym = sepMotor1_4294603942
+	srfN = srfAttach,stackDecouplerMini_4294603168
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294603066
+	partName = Part
+	pos = 0.7763669,4.998827,-4.958811
+	rot = -0.01893589,0.003465846,-0.457958,0.8887655
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 5
+	dstg = 11
+	sidx = 3
+	sqor = 5
+	attm = 0
+	link = sepMotor1_4294603040
+	link = sepMotor1_4294603002
+	link = stackDecouplerMini_4294602964
+	sym = stackDecouplerMini_4294603904
+	attN = bottom,stackDecouplerMini_4294602964
+	attN = top,stackDecouplerMini_4294603168
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294603040
+	partName = Part
+	pos = 0.9397277,4.768029,-4.982292
+	rot = -0.2042032,0.6810969,0.6656265,-0.2266046
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 5
+	dstg = 12
+	sidx = 4
+	sqor = 5
+	attm = 1
+	sym = sepMotor1_4294603878
+	srfN = srfAttach,stackDecouplerMini_4294603066
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294603002
+	partName = Part
+	pos = 0.6115215,5.227684,-4.998707
+	rot = 0.6656271,0.2266044,0.2042034,0.6810963
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 5
+	dstg = 12
+	sidx = 5
+	sqor = 5
+	attm = 1
+	sym = sepMotor1_4294603840
+	srfN = srfAttach,stackDecouplerMini_4294603066
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294602964
+	partName = Part
+	pos = 0.6528026,4.910796,-4.953221
+	rot = -0.01893559,0.003465682,-0.457958,0.8887655
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 6
+	dstg = 13
+	sidx = 3
+	sqor = 6
+	attm = 0
+	link = sepMotor1_4294602938
+	link = sepMotor1_4294602900
+	link = stackDecouplerMini_4294602862
+	sym = stackDecouplerMini_4294603802
+	attN = bottom,stackDecouplerMini_4294602862
+	attN = top,stackDecouplerMini_4294603066
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294602938
+	partName = Part
+	pos = 0.8161617,4.679996,-4.97671
+	rot = -0.2042023,0.6810973,0.6656265,-0.2266043
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 6
+	dstg = 14
+	sidx = 4
+	sqor = 6
+	attm = 1
+	sym = sepMotor1_4294603776
+	srfN = srfAttach,stackDecouplerMini_4294602964
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294602900
+	partName = Part
+	pos = 0.4879582,5.139654,-4.993114
+	rot = 0.6656275,0.2266044,0.2042028,0.6810963
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 6
+	dstg = 14
+	sidx = 5
+	sqor = 6
+	attm = 1
+	sym = sepMotor1_4294603738
+	srfN = srfAttach,stackDecouplerMini_4294602964
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294602862
+	partName = Part
+	pos = 0.5292352,4.822762,-4.947629
+	rot = -0.01893595,0.003466204,-0.457958,0.8887656
+	attRot = -0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 7
+	dstg = 15
+	sidx = 3
+	sqor = 7
+	attm = 0
+	link = sepMotor1_4294602836
+	link = sepMotor1_4294602798
+	link = stackDecouplerMini_4294602130
+	sym = stackDecouplerMini_4294603700
+	attN = bottom,stackDecouplerMini_4294602130
+	attN = top,stackDecouplerMini_4294602964
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294602836
+	partName = Part
+	pos = 0.6925939,4.591965,-4.971122
+	rot = -0.2042038,0.6810969,0.6656265,-0.2266044
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 7
+	dstg = 16
+	sidx = 4
+	sqor = 7
+	attm = 1
+	sym = sepMotor1_4294603674
+	srfN = srfAttach,stackDecouplerMini_4294602862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294602798
+	partName = Part
+	pos = 0.3643899,5.051618,-4.987525
+	rot = 0.6656273,0.226604,0.2042036,0.6810963
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 7
+	dstg = 16
+	sidx = 5
+	sqor = 7
+	attm = 1
+	sym = sepMotor1_4294603636
+	srfN = srfAttach,stackDecouplerMini_4294602862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = SmallGearBay_4294602760
+	partName = Part
+	pos = 0.116565,4.921844,-1.45026
+	rot = -0.1348321,-3.276259E-08,1.358248E-07,0.9908686
+	attRot = -0.1305262,0,0,0.991445
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,smallHardpoint_4294604500
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGear
+		isEnabled = True
+		brakesEngaged = False
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LockSteering
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			InvertSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleConstrainPosition
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = SmallGearBay_4294602584
+	partName = Part
+	pos = -1.733108,4.90858,-5.474509
+	rot = -0.08715591,4.214685E-08,-1.685874E-07,-0.9961948
+	attRot = 0.08715575,0,0,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = SmallGearBay_4294602408
+	srfN = srfAttach,smallHardpoint_4294604556
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGear
+		isEnabled = True
+		brakesEngaged = False
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LockSteering
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			InvertSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleConstrainPosition
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = SmallGearBay_4294602408
+	partName = Part
+	pos = 1.966234,4.90858,-5.474509
+	rot = 0.08715591,-3.831917E-08,-8.046602E-08,0.9961948
+	attRot = -0.08715575,0,0,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = SmallGearBay_4294602584
+	srfN = srfAttach,smallHardpoint_4294604528
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingGear
+		isEnabled = True
+		brakesEngaged = False
+		brakesEnabled = True
+		storedGearState = UNDEFINED
+		storedAnimationSpeed = 0
+		storedAnimationTime = 0
+		StartDeployed = True
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			EnableBrakes
+			{
+				active = False
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Enable brakes
+				guiName = Enable brakes
+				category = Enable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableBrakes
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Disable brakes
+				guiName = Disable brakes
+				category = Disable brakes
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LowerLandingGear
+			{
+				active = False
+				guiActive = True
+				guiIcon = Lower Gear
+				guiName = Lower Gear
+				category = Lower Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RaiseLandingGear
+			{
+				active = True
+				guiActive = True
+				guiIcon = Raise Gear
+				guiName = Raise Gear
+				category = Raise Gear
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			BrakesAction
+			{
+				actionGroup = Brakes
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSteering
+		isEnabled = True
+		steeringLocked = True
+		invertSteering = False
+		EVENTS
+		{
+			UnLockSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Unlock Steering
+				guiName = Unlock Steering
+				category = Unlock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LockSteering
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Steering
+				guiName = Lock Steering
+				category = Lock Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			InvertSteering
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Invert Steering
+				guiName = Invert Steering
+				category = Invert Steering
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			InvertSteeringAction
+			{
+				actionGroup = None
+			}
+			LockSteeringAction
+			{
+				actionGroup = None
+			}
+			UnlockSteeringAction
+			{
+				actionGroup = None
+			}
+			ToggleSteeringAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = FXModuleConstrainPosition
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294602232
+	partName = Part
+	pos = -0.172538,4.734714,-4.94204
+	rot = -0.01367423,-0.01367433,0.4581451,0.8886672
+	attRot = -0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	istg = 8
+	dstg = 17
+	sidx = 0
+	sqor = 8
+	attm = 0
+	link = sepMotor1_4294602206
+	link = sepMotor1_4294602168
+	link = stackDecouplerMini_4294602028
+	sym = stackDecouplerMini_4294602130
+	attN = bottom,stackDecouplerMini_4294602028
+	attN = top,stackDecouplerMini_4294603700
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294602206
+	partName = Part
+	pos = -0.3353464,4.504277,-4.972015
+	rot = -0.2015872,-0.6734062,-0.6734064,-0.2289347
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 8
+	dstg = 18
+	sidx = 1
+	sqor = 8
+	attm = 1
+	sym = sepMotor1_4294602104
+	srfN = srfAttach,stackDecouplerMini_4294602232
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294602168
+	partName = Part
+	pos = -0.007398285,4.964412,-4.975451
+	rot = 0.6734065,-0.2289348,-0.2015871,0.6734061
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 8
+	dstg = 18
+	sidx = 2
+	sqor = 8
+	attm = 1
+	sym = sepMotor1_4294602066
+	srfN = srfAttach,stackDecouplerMini_4294602232
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294602130
+	partName = Part
+	pos = 0.4056662,4.734732,-4.942039
+	rot = -0.01367444,0.01367444,-0.4581452,0.8886672
+	attRot = 0.5,0.5,-0.5,0.5
+	mir = 1,1,1
+	istg = 8
+	dstg = 17
+	sidx = 3
+	sqor = 8
+	attm = 0
+	link = sepMotor1_4294602104
+	link = sepMotor1_4294602066
+	link = stackDecouplerMini_4294601926
+	sym = stackDecouplerMini_4294602232
+	attN = bottom,stackDecouplerMini_4294601926
+	attN = top,stackDecouplerMini_4294602862
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294602104
+	partName = Part
+	pos = 0.5684766,4.504292,-4.972014
+	rot = -0.2015872,0.6734065,0.6734056,-0.2289354
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 8
+	dstg = 18
+	sidx = 4
+	sqor = 8
+	attm = 1
+	sym = sepMotor1_4294602206
+	srfN = srfAttach,stackDecouplerMini_4294602130
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294602066
+	partName = Part
+	pos = 0.2405295,4.964413,-4.97545
+	rot = 0.6734065,0.2289353,0.2015869,0.6734058
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 8
+	dstg = 18
+	sidx = 5
+	sqor = 8
+	attm = 1
+	sym = sepMotor1_4294602168
+	srfN = srfAttach,stackDecouplerMini_4294602130
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294602028
+	partName = Part
+	pos = -0.04897002,4.64668,-4.936461
+	rot = -0.01367456,-0.01367453,0.4581451,0.8886673
+	attRot = -0.5,-0.5,0.5,0.5
+	mir = 1,1,1
+	istg = 9
+	dstg = 19
+	sidx = 0
+	sqor = 9
+	attm = 0
+	link = sepMotor1_4294602002
+	link = sepMotor1_4294601964
+	sym = stackDecouplerMini_4294601926
+	attN = top,stackDecouplerMini_4294602232
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294602002
+	partName = Part
+	pos = -0.2117802,4.416243,-4.966428
+	rot = -0.2015873,-0.6734061,-0.6734064,-0.2289349
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 9
+	dstg = 20
+	sidx = 1
+	sqor = 9
+	attm = 1
+	sym = sepMotor1_4294601900
+	srfN = srfAttach,stackDecouplerMini_4294602028
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294601964
+	partName = Part
+	pos = 0.1161697,4.876378,-4.969862
+	rot = 0.6734067,-0.2289345,-0.2015874,0.6734059
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 9
+	dstg = 20
+	sidx = 2
+	sqor = 9
+	attm = 1
+	sym = sepMotor1_4294601862
+	srfN = srfAttach,stackDecouplerMini_4294602028
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecouplerMini_4294601926
+	partName = Part
+	pos = 0.2820996,4.646692,-4.936456
+	rot = -0.01367447,0.0136742,-0.4581452,0.8886672
+	attRot = 0.5,0.5,-0.5,0.5
+	mir = 1,1,1
+	istg = 9
+	dstg = 19
+	sidx = 3
+	sqor = 9
+	attm = 0
+	link = sepMotor1_4294601900
+	link = sepMotor1_4294601862
+	sym = stackDecouplerMini_4294602028
+	attN = top,stackDecouplerMini_4294602130
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sepMotor1_4294601900
+	partName = Part
+	pos = 0.4449073,4.416264,-4.966421
+	rot = -0.2015871,0.6734061,0.6734061,-0.2289354
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 9
+	dstg = 20
+	sidx = 4
+	sqor = 9
+	attm = 1
+	sym = sepMotor1_4294602002
+	srfN = srfAttach,stackDecouplerMini_4294601926
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sepMotor1_4294601862
+	partName = Part
+	pos = 0.1169613,4.876369,-4.969857
+	rot = 0.6734068,0.2289352,0.2015867,0.6734055
+	attRot = -1.776357E-15,5.960464E-08,0.9999999,-2.880043E-15
+	mir = 1,1,1
+	istg = 9
+	dstg = 20
+	sidx = 5
+	sqor = 9
+	attm = 1
+	sym = sepMotor1_4294601964
+	srfN = srfAttach,stackDecouplerMini_4294601926
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 8
+		maxAmount = 8
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sweptWing_4294601824
+	partName = Winglet
+	pos = -6.445042,6.153121,-6.970166
+	rot = 0.0723131,-0.7033997,-0.7033996,-0.0723131
+	attRot = -0.1736482,0,0,0.9848078
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = StandardCtrlSrf_4294601208
+	sym = sweptWing_4294601796
+	srfN = srfAttach,sweptWing_4294604612
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294601796
+	partName = Winglet
+	pos = 6.678154,6.153121,-6.970166
+	rot = -0.7034001,-0.07231304,0.07231319,-0.7033992
+	attRot = 0.1736482,0,0,0.9848078
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = StandardCtrlSrf_4294601160
+	sym = sweptWing_4294601824
+	srfN = srfAttach,sweptWing_4294604584
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294601768
+	partName = Winglet
+	pos = -6.824745,6.153121,-5.927459
+	rot = 0.1280693,-0.6954124,-0.6954124,-0.1280693
+	attRot = 0.08715575,0,0,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = smallHardpoint_4294601740
+	sym = sweptWing_4294601712
+	srfN = srfAttach,sweptWing_4294604668
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallHardpoint_4294601740
+	partName = Strut
+	pos = -6.694154,6.49262,-6.497048
+	rot = 0.5568668,-0.6004869,-0.4270037,0.3833841
+	attRot = -1.36678E-09,0.08715574,-5.05379E-09,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = strutConnector_4294601656
+	link = strutConnector_4294601544
+	link = strutConnector_4294601432
+	link = strutConnector_4294601320
+	sym = smallHardpoint_4294601684
+	srfN = srfAttach,sweptWing_4294601768
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sweptWing_4294601712
+	partName = Winglet
+	pos = 7.057859,6.153121,-5.927459
+	rot = -0.6954127,-0.1280692,0.1280693,-0.6954121
+	attRot = -0.08715575,0,0,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = smallHardpoint_4294601684
+	sym = sweptWing_4294601768
+	srfN = srfAttach,sweptWing_4294604640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallHardpoint_4294601684
+	partName = Strut
+	pos = 6.927267,6.49262,-6.497048
+	rot = -0.4270037,0.3833842,0.5568668,-0.6004866
+	attRot = -1.36678E-09,0.08715574,-5.05379E-09,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = strutConnector_4294601600
+	link = strutConnector_4294601488
+	link = strutConnector_4294601376
+	link = strutConnector_4294601264
+	sym = smallHardpoint_4294601740
+	srfN = srfAttach,sweptWing_4294601712
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601656
+	partName = StrutConnector
+	pos = -6.741478,6.669222,-6.459541
+	rot = -0.5322186,0.5813358,0.2850859,-0.5454527
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: sweptWing_15; pos: -0.850544,-0.3111703,4.569233; dir: -0.1825925,-0.06680097,0.9809167
+	sym = strutConnector_4294601600
+	srfN = srfAttach,smallHardpoint_4294601740
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601600
+	partName = StrutConnector
+	pos = 6.974591,6.669222,-6.459541
+	rot = -0.2850865,0.5454524,0.5322185,-0.5813357
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: sweptWing_64; pos: -0.8505517,-0.3111795,-4.569282; dir: -0.1825932,-0.06680224,-0.980918
+	sym = strutConnector_4294601656
+	srfN = srfAttach,smallHardpoint_4294601684
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601544
+	partName = StrutConnector
+	pos = -6.623281,6.615379,-6.766416
+	rot = 0.299554,-0.8150792,-0.377247,0.3218673
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: sweptWing_22; pos: 2.004825,-1.156408,4.045068; dir: 0.4301853,-0.2481363,0.8679683
+	sym = strutConnector_4294601488
+	srfN = srfAttach,smallHardpoint_4294601740
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601488
+	partName = StrutConnector
+	pos = 6.856393,6.615379,-6.766416
+	rot = -0.3772476,0.3218673,0.299554,-0.815079
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: sweptWing_71; pos: 2.004826,-1.156414,-4.045068; dir: 0.4301854,-0.2481368,-0.8679692
+	sym = strutConnector_4294601544
+	srfN = srfAttach,smallHardpoint_4294601684
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601432
+	partName = StrutConnector
+	pos = -6.654549,6.640442,-6.399455
+	rot = -0.5913267,0.5431616,0.5290607,-0.2745969
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: smallHardpoint_108; pos: -2.521523,-0.6363518,-6.622952; dir: -0.3543839,-0.08943524,-0.9308133
+	sym = strutConnector_4294601376
+	srfN = srfAttach,smallHardpoint_4294601740
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601376
+	partName = StrutConnector
+	pos = 6.887664,6.640442,-6.399455
+	rot = -0.5290611,0.2745972,0.5913268,-0.5431613
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: smallHardpoint_108; pos: -2.521514,-0.6363491,6.622943; dir: -0.3543839,-0.08943432,0.9308148
+	sym = strutConnector_4294601432
+	srfN = srfAttach,smallHardpoint_4294601684
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601320
+	partName = StrutConnector
+	pos = -6.539164,6.582107,-6.760505
+	rot = -0.3130749,0.6758772,0.6648126,-0.05655624
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: MK1Fuselage_10; pos: -4.14901,-0.4871388,-2.273006; dir: -0.8724005,-0.102429,-0.477939
+	sym = strutConnector_4294601264
+	srfN = srfAttach,smallHardpoint_4294601740
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = strutConnector_4294601264
+	partName = StrutConnector
+	pos = 6.772276,6.582106,-6.760505
+	rot = -0.6648132,0.05655648,0.3130749,-0.6758764
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: MK1Fuselage_59; pos: -4.148995,-0.4871338,2.273002; dir: -0.8724014,-0.1024284,0.4779399
+	sym = strutConnector_4294601320
+	srfN = srfAttach,smallHardpoint_4294601684
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294601208
+	partName = Part
+	pos = -9.080363,6.153121,-8.765559
+	rot = 0.1334711,-0.6943958,-0.6943958,-0.1334714
+	attRot = 0,-0.7071068,4.214685E-08,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294601160
+	srfN = srfAttach,sweptWing_4294601824
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294601160
+	partName = Part
+	pos = 9.31348,6.153121,-8.765561
+	rot = 0.1334711,0.6943961,0.6943957,-0.1334714
+	attRot = 0,0.7071068,-4.214685E-08,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294601208
+	srfN = srfAttach,sweptWing_4294601796
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294601112
+	partName = Part
+	pos = -6.309076,6.153121,-7.119993
+	rot = 0.1386094,-0.6933885,-0.6933885,-0.1386096
+	attRot = 0.5,-0.5000001,-0.5,0.5
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294601064
+	srfN = srfAttach,sweptWing_4294604612
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294601064
+	partName = Part
+	pos = 6.542194,6.153121,-7.119993
+	rot = 0.1386095,0.6933888,0.6933882,-0.1386095
+	attRot = -0.5,0.5000001,0.5,0.5
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294601112
+	srfN = srfAttach,sweptWing_4294604584
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294601016
+	partName = Part
+	pos = -3.971642,6.153121,-6.706865
+	rot = 0.04238352,-0.7061057,-0.7056469,-0.04100283
+	attRot = -0.09229597,-0.7010574,0.09229601,0.7010573
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294600968
+	srfN = srfAttach,sweptWing_4294604612
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = StandardCtrlSrf_4294600968
+	partName = Part
+	pos = 4.204763,6.153121,-6.706865
+	rot = 0.04238356,0.7061058,0.7056468,-0.04100275
+	attRot = 0.09229597,0.7010574,-0.09229601,0.7010573
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = StandardCtrlSrf_4294601016
+	srfN = srfAttach,sweptWing_4294604584
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = AdvancedCanard_4294600920
+	partName = Part
+	pos = -0.3744171,6.153121,-0.0424701
+	rot = 0.702435,0.1150918,0.008503467,0.7023295
+	attRot = 9.740744E-18,5.194888E-09,0.08715574,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = AdvancedCanard_4294600882
+	srfN = srfAttach,Mark1Cockpit_4294605602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = AdvancedCanard_4294600882
+	partName = Part
+	pos = 0.6075439,6.153121,-0.0424701
+	rot = 0.008503444,0.7023296,0.7024351,0.1150917
+	attRot = -9.740744E-18,-5.194888E-09,-0.08715574,0.9961947
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = AdvancedCanard_4294600920
+	srfN = srfAttach,Mark1Cockpit_4294605602
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = tailfin_4294600844
+	partName = Winglet
+	pos = -0.4690757,6.310042,-8.64016
+	rot = 0.09229597,0.7010574,0.7010574,0.09229597
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = smallCtrlSrf_4294600816
+	sym = tailfin_4294600770
+	srfN = srfAttach,fuelTankSmallFlat_4294605386
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallCtrlSrf_4294600816
+	partName = Part
+	pos = -1.389053,6.55655,-9.74422
+	rot = 0.7042421,-0.063586,-0.120852,0.6967029
+	attRot = -0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = smallCtrlSrf_4294600742
+	srfN = srfAttach,tailfin_4294600844
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = tailfin_4294600770
+	partName = Winglet
+	pos = 0.7022025,6.310042,-8.64016
+	rot = -0.7010576,-0.09229599,-0.09229599,-0.7010573
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = smallCtrlSrf_4294600742
+	sym = tailfin_4294600844
+	srfN = srfAttach,fuelTankSmallFlat_4294605386
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARWingAerodynamicModel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = smallCtrlSrf_4294600742
+	partName = Part
+	pos = 1.62218,6.55655,-9.74422
+	rot = -0.1208521,0.6967027,0.7042423,-0.06358602
+	attRot = -0.7071067,0,0,0.7071067
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = smallCtrlSrf_4294600816
+	srfN = srfAttach,tailfin_4294600770
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = FARControllableSurface
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}

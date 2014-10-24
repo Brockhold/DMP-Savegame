@@ -1,0 +1,7115 @@
+ship = Crew Shuttle
+version = 0.23.5
+description = 
+type = VAB
+PART
+{
+	part = Mark1-2Pod_4294433688
+	partName = Part
+	pos = 1.313165E-06,38.847,4.362315E-06
+	rot = 1.906513E-09,0.9762961,-6.225215E-11,-0.2164397
+	attRot = 1.906513E-09,0.9762961,-6.225215E-11,-0.2164397
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = crewCabin_4294418694
+	link = rtg_4294377788
+	link = rtg_4294370708
+	link = rtg_4294370676
+	link = rtg_4294370644
+	link = sasModule_4294328590
+	link = spotLight1_4294312260
+	attN = bottom,crewCabin_4294418694
+	attN = top,sasModule_4294328590
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = FuelPanel
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = RasterPropMonitorComputer
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 150
+		maxAmount = 150
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 30
+		maxAmount = 30
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = crewCabin_4294418694
+	partName = Part
+	pos = 1.307746E-06,37.38087,4.363703E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = crewCabin_4294417594
+	link = mumech.MJ2.AR202_4294325512
+	attN = top,Mark1-2Pod_4294433688
+	attN = bottom,crewCabin_4294417594
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+}
+PART
+{
+	part = crewCabin_4294417594
+	partName = Part
+	pos = 1.300452E-06,35.40707,4.365572E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = crewCabin_4294417336
+	link = KW1mtankL4_4294405082
+	link = KW1mtankL4_4294404990
+	attN = top,crewCabin_4294418694
+	attN = bottom,crewCabin_4294417336
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+}
+PART
+{
+	part = crewCabin_4294417336
+	partName = Part
+	pos = 1.293157E-06,33.43327,4.367441E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = RCSTank1-2_4294346732
+	attN = top,crewCabin_4294417594
+	attN = bottom,RCSTank1-2_4294346732
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		EVENTS
+		{
+			StoreDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Store Experiments (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = False
+				guiActive = False
+				guiIcon = 
+				guiName = Take Data (0)
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Stored Data (0)
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = ToggleFlag
+				guiName = ToggleFlag
+				category = ToggleFlag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CrewXferModule
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = JSINonTransparentPod
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+}
+PART
+{
+	part = KW1mtankL4_4294405082
+	partName = Part
+	pos = 1.779724,35.30872,4.600734E-06
+	rot = 9.718659E-10,0.7071069,-1.641385E-09,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sasModule_4294364416
+	link = sasModule_4294362524
+	link = RCSBlock_4294358334
+	link = KWRadBattLargeL_4294357858
+	link = RCSBlock_4294356616
+	sym = KW1mtankL4_4294404990
+	srfN = srfAttach,crewCabin_4294417594
+	attN = top,sasModule_4294364416
+	attN = bottom,sasModule_4294362524
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 405
+		maxAmount = 405
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 495
+		maxAmount = 495
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KW1mtankL4_4294404990
+	partName = Part
+	pos = -1.779721,35.30872,4.30271E-06
+	rot = 1.641385E-09,0.7071068,9.71866E-10,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = sasModule_4294364776
+	link = sasModule_4294362730
+	link = RCSBlock_4294358668
+	link = KWRadBattLargeL_4294387038
+	link = RCSBlock_4294357046
+	sym = KW1mtankL4_4294405082
+	srfN = srfAttach,crewCabin_4294417594
+	attN = top,sasModule_4294364776
+	attN = bottom,sasModule_4294362730
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 405
+		maxAmount = 405
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 495
+		maxAmount = 495
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = rtg_4294377788
+	partName = Part
+	pos = 0.5010468,39.64083,-0.5044574
+	rot = 0.3934709,0.1859351,-0.8977236,0.06856544
+	attRot = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294370708
+	sym = rtg_4294370676
+	sym = rtg_4294370644
+	srfN = srfAttach,Mark1-2Pod_4294433688
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = rtg_4294370708
+	partName = Part
+	pos = -0.5044603,39.64083,-0.5010411
+	rot = -0.3565605,0.1799591,-0.9130125,-0.08299291
+	attRot = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294377788
+	sym = rtg_4294370676
+	sym = rtg_4294370644
+	srfN = srfAttach,Mark1-2Pod_4294433688
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = rtg_4294370676
+	partName = Part
+	pos = -0.5010441,39.64083,0.5044662
+	rot = -0.8977237,0.06856544,-0.3934709,-0.1859352
+	attRot = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294377788
+	sym = rtg_4294370708
+	sym = rtg_4294370644
+	srfN = srfAttach,Mark1-2Pod_4294433688
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = rtg_4294370644
+	partName = Part
+	pos = 0.5044631,39.64083,0.5010498
+	rot = -0.9130125,-0.08299291,0.3565605,-0.1799591
+	attRot = 0.7071068,0,0,0.7071068
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = rtg_4294377788
+	sym = rtg_4294370708
+	sym = rtg_4294370676
+	srfN = srfAttach,Mark1-2Pod_4294433688
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = sasModule_4294364776
+	partName = Part
+	pos = -1.779721,37.99094,4.243106E-06
+	rot = -4.734216E-10,0,-1.847848E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = sasModule_4294364416
+	attN = bottom,KW1mtankL4_4294404990
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sasModule_4294364416
+	partName = Part
+	pos = 1.779724,37.99094,4.481524E-06
+	rot = -1.847848E-09,-1,4.734219E-10,-1.192093E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	sym = sasModule_4294364776
+	attN = bottom,KW1mtankL4_4294405082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sasModule_4294362730
+	partName = Part
+	pos = -1.779721,32.6265,4.243106E-06
+	rot = 0,4.734216E-10,1,1.847848E-09
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294393926
+	sym = sasModule_4294362524
+	attN = bottom,KW1mtankL4_4294404990
+	attN = top,liquidEngine_4294393926
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = sasModule_4294362524
+	partName = Part
+	pos = 1.779724,32.6265,4.481524E-06
+	rot = -1,1.847848E-09,-1.192093E-07,-4.734219E-10
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = liquidEngine_4294362132
+	sym = sasModule_4294362730
+	attN = bottom,KW1mtankL4_4294405082
+	attN = top,liquidEngine_4294362132
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = liquidEngine_4294393926
+	partName = Part
+	pos = -1.779721,31.54245,4.30271E-06
+	rot = -4.734216E-10,0,-1.847848E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	attm = 0
+	sym = liquidEngine_4294362132
+	attN = top,sasModule_4294362730
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = liquidEngine_4294362132
+	partName = Part
+	pos = 1.779724,31.54245,4.42192E-06
+	rot = -1.847848E-09,-1,4.734219E-10,-1.192093E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	attm = 0
+	sym = liquidEngine_4294393926
+	attN = top,sasModule_4294362524
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = RCSBlock_4294358668
+	partName = Part
+	pos = -2.441339,33.0285,0.0007465594
+	rot = 4.734216E-10,0,1.847848E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = RCSBlock_4294358334
+	srfN = srfAttach,KW1mtankL4_4294404990
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = RCSBlock_4294358334
+	partName = Part
+	pos = 2.441342,33.0285,-0.0007377155
+	rot = 1.847848E-09,1,-4.734219E-10,1.192093E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = RCSBlock_4294358668
+	srfN = srfAttach,KW1mtankL4_4294405082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = KWRadBattLargeL_4294387038
+	partName = Part
+	pos = -2.385571,35.15311,4.123896E-06
+	rot = -9.718659E-10,-0.7071069,1.641385E-09,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWRadBattLargeL_4294357858
+	srfN = srfAttach,KW1mtankL4_4294404990
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1200
+		maxAmount = 1200
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KWRadBattLargeL_4294357858
+	partName = Part
+	pos = 2.385575,35.15311,4.42192E-06
+	rot = 1.641385E-09,0.7071069,9.718658E-10,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWRadBattLargeL_4294387038
+	srfN = srfAttach,KW1mtankL4_4294405082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1200
+		maxAmount = 1200
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = RCSBlock_4294357046
+	partName = Part
+	pos = -2.43997,37.59274,0.0007466786
+	rot = 4.734216E-10,0,1.847848E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = RCSBlock_4294356616
+	srfN = srfAttach,KW1mtankL4_4294404990
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = RCSBlock_4294356616
+	partName = Part
+	pos = 2.439972,37.59274,-0.0007379539
+	rot = 1.847848E-09,1,-4.734219E-10,1.192093E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = RCSBlock_4294357046
+	srfN = srfAttach,KW1mtankL4_4294405082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleRCS
+		isEnabled = True
+		isEnabled = True
+		EVENTS
+		{
+			Disable
+			{
+				active = True
+				guiActive = True
+				guiIcon = Disable RCS Port
+				guiName = Disable RCS Port
+				category = Disable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Enable
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable RCS Port
+				guiName = Enable RCS Port
+				category = Enable RCS Port
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = RCSTank1-2_4294346732
+	partName = Part
+	pos = 1.287662E-06,31.94637,4.368849E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = asasmodule1-2_4294343696
+	link = telescopicLadderBay_4294294556
+	attN = top,crewCabin_4294417336
+	attN = bottom,asasmodule1-2_4294343696
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = MonoPropellant
+		amount = 750
+		maxAmount = 750
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = asasmodule1-2_4294343696
+	partName = Part
+	pos = 1.28489E-06,31.19637,4.369559E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = asasmodule1-2_4294329778
+	attN = top,RCSTank1-2_4294346732
+	attN = bottom,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = asasmodule1-2_4294329778
+	partName = Part
+	pos = 1.283043E-06,30.69637,4.370032E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = dockingPortLarge_4294330556
+	link = landingLeg1-2_4294296314
+	link = landingLeg1-2_4294295926
+	link = landingLeg1-2_4294295842
+	link = landingLeg1-2_4294295758
+	attN = top,asasmodule1-2_4294343696
+	attN = bottom,dockingPortLarge_4294330556
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = dockingPortLarge_4294330556
+	partName = Part
+	pos = 1.282119E-06,30.44637,4.370269E-06
+	rot = 0,4.734215E-10,1,1.847847E-09
+	attRot = 0,0,0.9999999,0
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = KW2mDecoupler_4294263258
+	attN = top,KW2mDecoupler_4294263258
+	attN = bottom,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+			Undock
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			UndockSameVessel
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple Node
+				guiName = Decouple Node
+				category = Decouple Node
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			SetAsTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Set as Target
+				guiName = Set as Target
+				category = Set as Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			UnsetTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unset Target
+				guiName = Unset Target
+				category = Unset Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			EnableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable Crossfeed
+				guiName = Enable Crossfeed
+				category = Enable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Disable Crossfeed
+				guiName = Disable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MakeReferenceTransform
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control from Here
+				guiName = Control from Here
+				category = Control from Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = sasModule_4294328590
+	partName = Part
+	pos = 1.318248E-06,40.22242,4.361013E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = dockingPort1_4294372208
+	attN = bottom,Mark1-2Pod_4294433688
+	attN = top,dockingPort1_4294372208
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = dockingPort1_4294372208
+	partName = Part
+	pos = 1.318941E-06,40.40995,4.360835E-06
+	rot = -4.734215E-10,0,-1.847847E-09,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 0
+	attN = bottom,sasModule_4294328590
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleDockingNode
+		isEnabled = True
+		state = Ready
+		dockUId = 0
+		dockNodeIdx = 0
+		EVENTS
+		{
+			Undock
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			UndockSameVessel
+			{
+				active = False
+				guiActive = True
+				guiIcon = Undock
+				guiName = Undock
+				category = Undock
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Decouple
+			{
+				active = False
+				guiActive = True
+				guiIcon = Decouple Node
+				guiName = Decouple Node
+				category = Decouple Node
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			SetAsTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Set as Target
+				guiName = Set as Target
+				category = Set as Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			UnsetTarget
+			{
+				active = True
+				guiActive = False
+				guiIcon = Unset Target
+				guiName = Unset Target
+				category = Unset Target
+				guiActiveUnfocused = True
+				unfocusedRange = 200
+				externalToEVAOnly = False
+			}
+			EnableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Enable Crossfeed
+				guiName = Enable Crossfeed
+				category = Enable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DisableXFeed
+			{
+				active = False
+				guiActive = True
+				guiIcon = Disable Crossfeed
+				guiName = Disable Crossfeed
+				category = Disable Crossfeed
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			MakeReferenceTransform
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control from Here
+				guiName = Control from Here
+				category = Control from Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			UndockAction
+			{
+				actionGroup = None
+			}
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		status = Locked
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle
+				guiName = Open Shield
+				category = Toggle
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleHeatShield
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleAnimation2Value
+		MM_REINITIALIZE = true
+	}
+	MODULE
+	{
+		name = ModuleAnimation2Value
+		MM_REINITIALIZE = true
+	}
+}
+PART
+{
+	part = mumech.MJ2.AR202_4294325512
+	partName = Part
+	pos = -0.5746304,37.36824,-0.9952871
+	rot = 1.333919E-09,0.5000001,1.363572E-09,-0.8660256
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,crewCabin_4294418694
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleCommand
+		isEnabled = True
+		controlSrcStatusText = 
+		EVENTS
+		{
+			MakeReference
+			{
+				active = True
+				guiActive = True
+				guiIcon = Control From Here
+				guiName = Control From Here
+				category = Control From Here
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			RenameVessel
+			{
+				active = True
+				guiActive = True
+				guiIcon = Rename Vessel
+				guiName = Rename Vessel
+				category = Rename Vessel
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = MechJebCore
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		MechJebLocalSettings
+		{
+			MechJebModuleJoke
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleMenu
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleInfoItems
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = True
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleLandingGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleRCSBalancerWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleLandingPredictions
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAttitudeAdjustment
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					val = 0
+					_text = 0
+				}
+				speed
+				{
+					val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSmartASS
+			{
+				mode = ORBITAL
+				target = OFF
+				advReference = INERTIAL
+				advDirection = FORWARD
+				forceRol = False
+				unlockParts = 
+				unlockTechs = flightControl
+				srfHdg
+				{
+					val = 90
+					_text = 90
+				}
+				srfPit
+				{
+					val = 90
+					_text = 90
+				}
+				srfRol
+				{
+					val = 0
+					_text = 0
+				}
+				rol
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSpaceplaneGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWarpHelper
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+				phaseAngle
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleWaypointWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleJokeObscurePanel
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleTranslatron
+			{
+				trans_spd = 0
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			ModExtensionDemo
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleTargetController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleThrustWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWarpController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleThrustController
+			{
+				limitThrottle = False
+				unlockParts = 
+				unlockTechs = 
+				maxThrottle
+				{
+					val = 1
+					_text = 100
+				}
+			}
+			MechJebModuleRCSController
+			{
+				unlockParts = 
+				unlockTechs = 
+				Tf
+				{
+					val = 1
+					_text = 1
+				}
+			}
+			MechJebModuleRCSBalancer
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAttitudeController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStagingController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleFlightRecorder
+			{
+				markUT = 0
+				deltaVExpended = 0
+				dragLosses = 0
+				gravityLosses = 0
+				steeringLosses = 0
+				markLatitude = 0
+				markLongitude = 0
+				markAltitude = 0
+				markBodyIndex = 1
+				maxDragGees = 0
+				unlockParts = 
+				unlockTechs = 
+			}
+		}
+	}
+	MODULE
+	{
+		name = MechJebAR202
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTripLogger
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		Surfaced
+		{
+		}
+		Flew
+		{
+		}
+		FlewBy
+		{
+		}
+		Orbited
+		{
+		}
+		SubOrbited
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+		MODULE
+		{
+			name = ExWorkshop
+			isEnabled = True
+			EVENTS
+			{
+				ExDiscoverWorkshops
+				{
+					active = True
+					guiActive = False
+					guiIcon = 
+					guiName = 
+					category = 
+					guiActiveUnfocused = False
+					unfocusedRange = 2
+					externalToEVAOnly = True
+				}
+			}
+			ACTIONS
+			{
+			}
+		}
+		MODULE
+		{
+			name = FNModuleRadiation
+			isEnabled = True
+			EVENTS
+			{
+			}
+			ACTIONS
+			{
+			}
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 5
+		maxAmount = 5
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = spotLight1_4294312260
+	partName = Part
+	pos = -1.111199,39.26479,0.003616761
+	rot = -0.7079329,0.09321597,-0.6887659,-0.1254734
+	attRot = 0.001902651,-0.04357788,0.9980973,-0.04357787
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,Mark1-2Pod_4294433688
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294296314
+	partName = Part
+	pos = 0.9633248,30.84425,-0.963319
+	rot = 1.757215E-07,0.9238797,-3.043599E-07,0.3826835
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = landingLeg1-2_4294295926
+	sym = landingLeg1-2_4294295842
+	sym = landingLeg1-2_4294295758
+	srfN = srfAttach,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294295926
+	partName = Part
+	pos = -0.9633218,30.84425,-0.9633189
+	rot = -8.934241E-08,0.9238796,-3.373108E-07,-0.3826835
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = landingLeg1-2_4294296314
+	sym = landingLeg1-2_4294295842
+	sym = landingLeg1-2_4294295758
+	srfN = srfAttach,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294295842
+	partName = Part
+	pos = -0.9633219,30.84425,0.9633276
+	rot = -3.020708E-07,0.3826835,-1.726695E-07,-0.9238796
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = landingLeg1-2_4294296314
+	sym = landingLeg1-2_4294295926
+	sym = landingLeg1-2_4294295758
+	srfN = srfAttach,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = landingLeg1-2_4294295758
+	partName = Part
+	pos = 0.9633247,30.84425,0.9633277
+	rot = -3.378503E-07,-0.3826835,9.311915E-08,-0.9238796
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = landingLeg1-2_4294296314
+	sym = landingLeg1-2_4294295926
+	sym = landingLeg1-2_4294295842
+	srfN = srfAttach,asasmodule1-2_4294329778
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleConfigBackup
+	}
+}
+PART
+{
+	part = telescopicLadderBay_4294294556
+	partName = Part
+	pos = 1.134351E-06,32.29477,-1.207871
+	rot = 1.491862E-16,0.7071068,-1.110223E-16,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	attm = 1
+	srfN = srfAttach,RCSTank1-2_4294346732
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	MODULE
+	{
+		name = RetractableLadder
+		isEnabled = True
+		StateName = Retracted
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Extend Ladder
+				guiName = Extend Ladder
+				category = Extend Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Retract Ladder
+				guiName = Retract Ladder
+				category = Retract Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = KW2mDecoupler_4294263258
+	partName = Part
+	pos = 1.281047E-06,30.02637,4.370544E-06
+	rot = -4.857226E-17,9.047288E-26,-1.110223E-16,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 1
+	dstg = 1
+	sidx = 0
+	sqor = 1
+	attm = 0
+	link = KWFlatadapter3x2_4294255214
+	attN = bottom,KWFlatadapter3x2_4294255214
+	attN = top,dockingPortLarge_4294330556
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWFlatadapter3x2_4294255214
+	partName = Part
+	pos = 1.281047E-06,29.35471,4.370544E-06
+	rot = 6.938894E-18,5.169879E-26,1.110223E-16,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 3
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = KW3mtankL4_4294251640
+	link = strutConnectorMedium_4294226546
+	link = strutConnectorMedium_4294225574
+	link = strutConnectorMedium_4294225514
+	link = strutConnectorMedium_4294225454
+	link = strutConnectorMedium_4294225394
+	attN = bottom,KW2mDecoupler_4294263258
+	attN = top,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KW3mtankL4_4294251640
+	partName = Part
+	pos = 1.281047E-06,21.85471,4.370544E-06
+	rot = 6.938894E-18,-1.29247E-26,-1.110223E-16,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = KW3mengineGriffonXX_4294250832
+	link = KWSASmodule3mHalf_4294248246
+	link = KWSASmodule3mHalf_4294248036
+	link = KWSASmodule3mHalf_4294247488
+	link = KWSASmodule3mHalf_4294247272
+	link = KWSASmodule3mHalf_4294247052
+	link = KWSASmodule3mHalf_4294246836
+	link = KWSASmodule3mHalf_4294245766
+	link = KWSASmodule3mHalf_4294245550
+	link = radialDecoupler2_4294240364
+	link = radialDecoupler2_4294224868
+	link = radialDecoupler2_4294224476
+	link = radialDecoupler2_4294224084
+	link = launchClamp1_4294210100
+	link = launchClamp1_4294207914
+	link = launchClamp1_4294207804
+	link = launchClamp1_4294207694
+	attN = top,KWFlatadapter3x2_4294255214
+	attN = bottom,KW3mengineGriffonXX_4294250832
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 10935
+		maxAmount = 10935
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 13365
+		maxAmount = 13365
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KW3mengineGriffonXX_4294250832
+	partName = Part
+	pos = 1.281047E-06,10.84471,4.370544E-06
+	rot = 6.938894E-18,5.169879E-26,1.110223E-16,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 2
+	dstg = 4
+	sidx = 0
+	sqor = 2
+	attm = 0
+	attN = top,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294248246
+	partName = Part
+	pos = 1.193956E-06,15.0724,-1.867367
+	rot = -1.639314E-16,1,3.469447E-17,-4.470348E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294248036
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294248036
+	partName = Part
+	pos = 1.551583E-06,15.0724,1.867376
+	rot = 9.46843E-10,-8.940697E-08,3.695695E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294248246
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294247488
+	partName = Part
+	pos = 1.074746E-06,16.1672,-1.872764
+	rot = -1.639314E-16,1,3.469447E-17,-4.470348E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294247272
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294247272
+	partName = Part
+	pos = 1.551583E-06,16.1672,1.872773
+	rot = 9.46843E-10,-8.940697E-08,3.695695E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294247488
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294247052
+	partName = Part
+	pos = 1.074746E-06,17.16497,-1.880583
+	rot = -1.639314E-16,1,3.469447E-17,-4.470348E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294246836
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294246836
+	partName = Part
+	pos = 1.491979E-06,17.16497,1.880592
+	rot = 9.46843E-10,-8.940697E-08,3.695695E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294247052
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294245766
+	partName = Part
+	pos = 1.074746E-06,18.20282,-1.871314
+	rot = -1.639314E-16,1,3.469447E-17,-4.470348E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294245550
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWSASmodule3mHalf_4294245550
+	partName = Part
+	pos = 1.551583E-06,18.20282,1.871323
+	rot = 9.46843E-10,-8.940697E-08,3.695695E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	sym = KWSASmodule3mHalf_4294245766
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleSAS
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleReactionWheel
+		isEnabled = True
+		stateString = 
+		WheelState = Active
+		EVENTS
+		{
+			OnToggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Torque
+				guiName = Toggle Torque
+				category = Toggle Torque
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			Activate
+			{
+				actionGroup = None
+			}
+			Deactivate
+			{
+				actionGroup = None
+			}
+			Toggle
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294226546
+	partName = StrutConnector
+	pos = -0.4429211,29.5034,-1.653004
+	rot = 0.2390074,-0.4949992,-0.3632306,0.7522732
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: crewCabin_2; pos: -4.47949,4.244269,0.2540885; dir: -0.7252941,0.6872088,0.0411408
+	sym = strutConnectorMedium_4294225574
+	sym = strutConnectorMedium_4294225514
+	sym = strutConnectorMedium_4294225454
+	sym = strutConnectorMedium_4294225394
+	srfN = srfAttach,KWFlatadapter3x2_4294255214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294225574
+	partName = StrutConnector
+	pos = -1.708974,29.5034,-0.0895593
+	rot = -0.02014056,0.04171231,-0.4343447,0.899555
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: liquidEngine_76; pos: -0.8681154,0.8225306,0.04924279; dir: -0.7252941,0.6872088,0.0411408
+	sym = strutConnectorMedium_4294226546
+	sym = strutConnectorMedium_4294225514
+	sym = strutConnectorMedium_4294225454
+	sym = strutConnectorMedium_4294225394
+	srfN = srfAttach,KWFlatadapter3x2_4294255214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294225514
+	partName = StrutConnector
+	pos = -0.6132811,29.5034,1.59766
+	rot = -0.2715955,0.5624912,-0.339554,0.7032374
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: crewCabin_2; pos: -4.291776,4.066412,0.2434429; dir: -0.7252941,0.6872088,0.0411408
+	sym = strutConnectorMedium_4294226546
+	sym = strutConnectorMedium_4294225574
+	sym = strutConnectorMedium_4294225454
+	sym = strutConnectorMedium_4294225394
+	srfN = srfAttach,KWFlatadapter3x2_4294255214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294225454
+	partName = StrutConnector
+	pos = 1.329948,29.5034,1.076973
+	rot = -0.4193102,0.8684176,-0.115065,0.2383069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: crewCabin_2; pos: -4.538765,4.30043,0.2574532; dir: -0.7252941,0.6872088,0.0411408
+	sym = strutConnectorMedium_4294226546
+	sym = strutConnectorMedium_4294225574
+	sym = strutConnectorMedium_4294225514
+	sym = strutConnectorMedium_4294225394
+	srfN = srfAttach,KWFlatadapter3x2_4294255214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294225394
+	partName = StrutConnector
+	pos = 1.435235,29.5034,-0.932048
+	rot = -0.4068626,0.8426378,0.1533747,-0.3176486
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: crewCabin_2; pos: -4.350101,4.121673,0.2467499; dir: -0.7252941,0.6872088,0.0411408
+	sym = strutConnectorMedium_4294226546
+	sym = strutConnectorMedium_4294225574
+	sym = strutConnectorMedium_4294225514
+	sym = strutConnectorMedium_4294225454
+	srfN = srfAttach,KWFlatadapter3x2_4294255214
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4294240364
+	partName = Part
+	pos = 1.015142E-06,19.87868,-1.78482
+	rot = 3.469447E-17,0.7071068,0,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 1
+	sqor = 2
+	attm = 1
+	link = KWsrbGlobeX5_4294234650
+	sym = radialDecoupler2_4294224868
+	sym = radialDecoupler2_4294224476
+	sym = radialDecoupler2_4294224084
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWsrbGlobeX5_4294234650
+	partName = Part
+	pos = 5.979091E-07,19.93112,-3.50339
+	rot = -1.604619E-16,1,6.938894E-18,-8.940697E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 6
+	sidx = 4
+	sqor = 3
+	attm = 1
+	link = strutConnectorMedium_4294229502
+	link = strutConnectorMedium_4294228724
+	link = strutConnectorMedium_4294227890
+	link = strutConnectorMedium_4294227354
+	link = strutConnectorMedium_4294221368
+	link = strutConnectorMedium_4294220034
+	sym = KWsrbGlobeX5_4294224820
+	sym = KWsrbGlobeX5_4294224428
+	sym = KWsrbGlobeX5_4294224036
+	srfN = srfAttach,radialDecoupler2_4294240364
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0.9
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 5600
+		maxAmount = 5600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294229502
+	partName = StrutConnector
+	pos = -0.9161381,27.80029,-2.974458
+	rot = -6.938894E-17,-0.258819,-2.220446E-16,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.376863,0.4266014,1.337083; dir: -0.7003031,0.2169777,0.6800707
+	sym = strutConnectorMedium_4294224716
+	sym = strutConnectorMedium_4294224324
+	sym = strutConnectorMedium_4294223932
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294228724
+	partName = StrutConnector
+	pos = 0.9160104,27.44269,-2.974534
+	rot = 3.324707E-09,0.9659259,-1.871097E-09,0.2588192
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.877913,0.7208519,-1.626276; dir: -0.7259908,0.278676,-0.6287106
+	sym = strutConnectorMedium_4294224656
+	sym = strutConnectorMedium_4294224264
+	sym = strutConnectorMedium_4294223872
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294227890
+	partName = StrutConnector
+	pos = 0.9181917,14.61902,-2.973275
+	rot = 3.324707E-09,0.9659259,-1.871097E-09,0.2588192
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.099085,0.2229557,-1.222921; dir: -0.6623828,0.1343717,-0.7370164
+	sym = strutConnectorMedium_4294224596
+	sym = strutConnectorMedium_4294224204
+	sym = strutConnectorMedium_4294223812
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294227354
+	partName = StrutConnector
+	pos = -0.9149621,14.4917,-2.975137
+	rot = -6.938894E-17,-0.258819,-2.220446E-16,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.642333,0.4147491,1.489574; dir: -0.7280867,0.1838677,0.6603654
+	sym = strutConnectorMedium_4294224536
+	sym = strutConnectorMedium_4294224144
+	sym = strutConnectorMedium_4294223752
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4294224868
+	partName = Part
+	pos = -1.784823,19.87868,4.481524E-06
+	rot = -1.374426E-09,-8.940697E-08,2.321269E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 2
+	sqor = 2
+	attm = 1
+	link = KWsrbGlobeX5_4294224820
+	sym = radialDecoupler2_4294240364
+	sym = radialDecoupler2_4294224476
+	sym = radialDecoupler2_4294224084
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWsrbGlobeX5_4294224820
+	partName = Part
+	pos = -3.503392,19.93112,4.958361E-06
+	rot = 6.695192E-10,0.7071068,2.613251E-09,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 6
+	sidx = 5
+	sqor = 3
+	attm = 1
+	link = strutConnectorMedium_4294224716
+	link = strutConnectorMedium_4294224656
+	link = strutConnectorMedium_4294224596
+	link = strutConnectorMedium_4294224536
+	link = strutConnectorMedium_4294221274
+	link = strutConnectorMedium_4294219974
+	sym = KWsrbGlobeX5_4294234650
+	sym = KWsrbGlobeX5_4294224428
+	sym = KWsrbGlobeX5_4294224036
+	srfN = srfAttach,radialDecoupler2_4294224868
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0.9
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 5600
+		maxAmount = 5600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224716
+	partName = StrutConnector
+	pos = -2.97446,27.80029,0.9161434
+	rot = -2.697491E-09,-0.8660255,-2.96525E-11,-0.5000002
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.37688,0.4266052,1.337099; dir: -0.7003031,0.2169777,0.6800707
+	sym = strutConnectorMedium_4294229502
+	sym = strutConnectorMedium_4294224324
+	sym = strutConnectorMedium_4294223932
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224656
+	partName = StrutConnector
+	pos = -2.974536,27.44269,-0.9160047
+	rot = 2.350923E-09,0.8660256,-1.323066E-09,-0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.877901,0.7208405,-1.626266; dir: -0.7259908,0.278676,-0.6287106
+	sym = strutConnectorMedium_4294228724
+	sym = strutConnectorMedium_4294224264
+	sym = strutConnectorMedium_4294223872
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224596
+	partName = StrutConnector
+	pos = -2.973277,14.61902,-0.9181864
+	rot = 2.350923E-09,0.8660256,-1.323066E-09,-0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.099084,0.2229557,-1.22292; dir: -0.6623828,0.1343717,-0.7370164
+	sym = strutConnectorMedium_4294227890
+	sym = strutConnectorMedium_4294224204
+	sym = strutConnectorMedium_4294223812
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224536
+	partName = StrutConnector
+	pos = -2.97514,14.4917,0.9149673
+	rot = -2.697491E-09,-0.8660255,-2.96525E-11,-0.5000002
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.642305,0.4147339,1.489548; dir: -0.7280867,0.1838677,0.6603654
+	sym = strutConnectorMedium_4294227354
+	sym = strutConnectorMedium_4294224144
+	sym = strutConnectorMedium_4294223752
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4294224476
+	partName = Part
+	pos = 1.670793E-06,19.87868,1.784829
+	rot = -1.943732E-09,-0.7071069,3.28277E-09,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 3
+	sqor = 2
+	attm = 1
+	link = KWsrbGlobeX5_4294224428
+	sym = radialDecoupler2_4294240364
+	sym = radialDecoupler2_4294224868
+	sym = radialDecoupler2_4294224084
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWsrbGlobeX5_4294224428
+	partName = Part
+	pos = 2.505258E-06,19.93112,3.503398
+	rot = 9.468432E-10,-2.235174E-07,3.695696E-09,-1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 6
+	sidx = 6
+	sqor = 3
+	attm = 1
+	link = strutConnectorMedium_4294224324
+	link = strutConnectorMedium_4294224264
+	link = strutConnectorMedium_4294224204
+	link = strutConnectorMedium_4294224144
+	link = strutConnectorMedium_4294221214
+	link = strutConnectorMedium_4294219914
+	sym = KWsrbGlobeX5_4294234650
+	sym = KWsrbGlobeX5_4294224820
+	sym = KWsrbGlobeX5_4294224036
+	srfN = srfAttach,radialDecoupler2_4294224476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0.9
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 5600
+		maxAmount = 5600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224324
+	partName = StrutConnector
+	pos = 0.9161412,27.80029,2.974466
+	rot = -3.814829E-09,-0.965926,-4.193559E-11,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.376878,0.426609,1.337097; dir: -0.7003031,0.2169777,0.6800707
+	sym = strutConnectorMedium_4294229502
+	sym = strutConnectorMedium_4294224716
+	sym = strutConnectorMedium_4294223932
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224264
+	partName = StrutConnector
+	pos = -0.9160071,27.44269,2.974543
+	rot = 6.245005E-17,0.2588192,-7.771561E-16,-0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.877927,0.7208576,-1.626289; dir: -0.7259908,0.278676,-0.6287106
+	sym = strutConnectorMedium_4294228724
+	sym = strutConnectorMedium_4294224656
+	sym = strutConnectorMedium_4294223872
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224204
+	partName = StrutConnector
+	pos = -0.9181888,14.61902,2.973283
+	rot = 6.245005E-17,0.2588192,-7.771561E-16,-0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.099076,0.2229538,-1.222912; dir: -0.6623828,0.1343717,-0.7370164
+	sym = strutConnectorMedium_4294227890
+	sym = strutConnectorMedium_4294224596
+	sym = strutConnectorMedium_4294223812
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294224144
+	partName = StrutConnector
+	pos = 0.914965,14.4917,2.975145
+	rot = -3.814829E-09,-0.965926,-4.193559E-11,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.642317,0.414732,1.489558; dir: -0.7280867,0.1838677,0.6603654
+	sym = strutConnectorMedium_4294227354
+	sym = strutConnectorMedium_4294224536
+	sym = strutConnectorMedium_4294223752
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4294224084
+	partName = Part
+	pos = 1.784825,19.87868,4.004687E-06
+	rot = -1.374426E-09,-1,2.321269E-09,8.940697E-08
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 2
+	dstg = 5
+	sidx = 4
+	sqor = 2
+	attm = 1
+	link = KWsrbGlobeX5_4294224036
+	sym = radialDecoupler2_4294240364
+	sym = radialDecoupler2_4294224868
+	sym = radialDecoupler2_4294224476
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = KWsrbGlobeX5_4294224036
+	partName = Part
+	pos = 3.503395,19.93112,3.52785E-06
+	rot = 6.695191E-10,-0.7071069,2.613251E-09,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 6
+	sidx = 7
+	sqor = 3
+	attm = 1
+	link = strutConnectorMedium_4294223932
+	link = strutConnectorMedium_4294223872
+	link = strutConnectorMedium_4294223812
+	link = strutConnectorMedium_4294223752
+	link = strutConnectorMedium_4294221154
+	link = strutConnectorMedium_4294220696
+	sym = KWsrbGlobeX5_4294234650
+	sym = KWsrbGlobeX5_4294224820
+	sym = KWsrbGlobeX5_4294224428
+	srfN = srfAttach,radialDecoupler2_4294224084
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0.9
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 5600
+		maxAmount = 5600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294223932
+	partName = StrutConnector
+	pos = 2.974463,27.80029,-0.916135
+	rot = -2.697491E-09,-0.5000002,-2.965295E-11,0.8660255
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.37686,0.4265919,1.337078; dir: -0.7003031,0.2169777,0.6800707
+	sym = strutConnectorMedium_4294229502
+	sym = strutConnectorMedium_4294224716
+	sym = strutConnectorMedium_4294224324
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294223872
+	partName = StrutConnector
+	pos = 2.97454,27.44269,0.916013
+	rot = -2.350923E-09,-0.4999999,1.323065E-09,-0.8660256
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.877939,0.7208614,-1.626297; dir: -0.7259908,0.278676,-0.6287106
+	sym = strutConnectorMedium_4294228724
+	sym = strutConnectorMedium_4294224656
+	sym = strutConnectorMedium_4294224264
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294223812
+	partName = StrutConnector
+	pos = 2.97328,14.61902,0.9181948
+	rot = -2.350923E-09,-0.4999999,1.323065E-09,-0.8660256
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.09908,0.2229538,-1.222914; dir: -0.6623828,0.1343717,-0.7370164
+	sym = strutConnectorMedium_4294227890
+	sym = strutConnectorMedium_4294224596
+	sym = strutConnectorMedium_4294224204
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294223752
+	partName = StrutConnector
+	pos = 2.975142,14.4917,-0.9149589
+	rot = -2.697491E-09,-0.5000002,-2.965295E-11,0.8660255
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.642344,0.4147453,1.489581; dir: -0.7280867,0.1838677,0.6603654
+	sym = strutConnectorMedium_4294227354
+	sym = strutConnectorMedium_4294224536
+	sym = strutConnectorMedium_4294224144
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294221368
+	partName = StrutConnector
+	pos = 0.9222736,19.97033,-2.970916
+	rot = 4.510281E-17,0.965926,-1.110223E-16,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.43208,-0.05017281,-1.373053; dir: -0.7215948,-0.02528015,-0.6918539
+	sym = strutConnectorMedium_4294221274
+	sym = strutConnectorMedium_4294221214
+	sym = strutConnectorMedium_4294221154
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294221274
+	partName = StrutConnector
+	pos = -2.97092,19.97033,-0.9222684
+	rot = 1.323065E-09,0.8660255,2.350923E-09,-0.5
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.432082,-0.05017471,-1.373055; dir: -0.7215948,-0.02528015,-0.6918539
+	sym = strutConnectorMedium_4294221368
+	sym = strutConnectorMedium_4294221214
+	sym = strutConnectorMedium_4294221154
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294221214
+	partName = StrutConnector
+	pos = -0.922271,19.97033,2.970927
+	rot = 1.871097E-09,0.258819,3.324707E-09,-0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.432076,-0.05016899,-1.37305; dir: -0.7215948,-0.02528015,-0.6918539
+	sym = strutConnectorMedium_4294221368
+	sym = strutConnectorMedium_4294221274
+	sym = strutConnectorMedium_4294221154
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294221154
+	partName = StrutConnector
+	pos = 2.970923,19.97033,0.9222767
+	rot = 1.323065E-09,-0.5,2.350922E-09,-0.8660255
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.432077,-0.05017281,-1.373049; dir: -0.7215948,-0.02528015,-0.6918539
+	sym = strutConnectorMedium_4294221368
+	sym = strutConnectorMedium_4294221274
+	sym = strutConnectorMedium_4294221214
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294220696
+	partName = StrutConnector
+	pos = 3.221097,19.89062,-1.053548
+	rot = 7.514869E-08,0.6087615,-1.301612E-07,-0.7933536
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.152813,0.03787846,2.159506; dir: -0.4708731,0.01547177,0.8820653
+	sym = strutConnectorMedium_4294220034
+	sym = strutConnectorMedium_4294219974
+	sym = strutConnectorMedium_4294219914
+	srfN = srfAttach,KWsrbGlobeX5_4294224036
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294220034
+	partName = StrutConnector
+	pos = -1.053552,19.89062,-3.221093
+	rot = 4.056537E-08,0.1305262,1.43054E-07,0.9914449
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.152809,0.03788038,2.159504; dir: -0.4708731,0.01547177,0.8820653
+	sym = strutConnectorMedium_4294220696
+	sym = strutConnectorMedium_4294219974
+	sym = strutConnectorMedium_4294219914
+	srfN = srfAttach,KWsrbGlobeX5_4294234650
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294219974
+	partName = StrutConnector
+	pos = -3.221096,19.89062,1.053557
+	rot = 1.325168E-07,0.7933535,7.214771E-08,0.6087616
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.152805,0.03787657,2.159496; dir: -0.4708731,0.01547177,0.8820653
+	sym = strutConnectorMedium_4294220696
+	sym = strutConnectorMedium_4294220034
+	sym = strutConnectorMedium_4294219914
+	srfN = srfAttach,KWsrbGlobeX5_4294224820
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = strutConnectorMedium_4294219914
+	partName = StrutConnector
+	pos = 1.053555,19.89062,3.221101
+	rot = 1.468416E-07,0.9914451,-4.102174E-08,-0.1305263
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 6
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: KW3mtankL4_10; pos: -1.15281,0.03787466,2.159502; dir: -0.4708731,0.01547177,0.8820653
+	sym = strutConnectorMedium_4294220696
+	sym = strutConnectorMedium_4294220034
+	sym = strutConnectorMedium_4294219974
+	srfN = srfAttach,KWsrbGlobeX5_4294224428
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = launchClamp1_4294210100
+	partName = Strut
+	pos = -1.872484,21.82275,-1.872481
+	rot = 1.835415E-07,-0.3826835,-4.917977E-08,-0.9238796
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 4
+	sidx = 3
+	sqor = 3
+	attm = 1
+	sym = launchClamp1_4294207914
+	sym = launchClamp1_4294207804
+	sym = launchClamp1_4294207694
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 8.910488
+		height = 22.4829
+		towerRot = -1.835415E-07,0.3826835,4.917977E-08,-0.9238796
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = launchClamp1_4294207914
+	partName = Strut
+	pos = -1.872485,21.82275,1.872489
+	rot = 9.233759E-08,-0.9238796,-1.649403E-07,-0.3826835
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 4
+	sidx = 0
+	sqor = 3
+	attm = 1
+	sym = launchClamp1_4294210100
+	sym = launchClamp1_4294207804
+	sym = launchClamp1_4294207694
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 8.910488
+		height = 22.4829
+		towerRot = -9.233757E-08,0.9238795,1.649403E-07,-0.3826835
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = launchClamp1_4294207804
+	partName = Strut
+	pos = 1.872487,21.82275,1.87249
+	rot = -5.29565E-08,-0.9238796,-1.840811E-07,0.3826835
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 4
+	sidx = 1
+	sqor = 3
+	attm = 1
+	sym = launchClamp1_4294210100
+	sym = launchClamp1_4294207914
+	sym = launchClamp1_4294207694
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 8.910488
+		height = 22.4829
+		towerRot = 5.29565E-08,0.9238796,1.840811E-07,0.3826835
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
+PART
+{
+	part = launchClamp1_4294207694
+	partName = Strut
+	pos = 1.872487,21.82275,-1.872481
+	rot = -1.672294E-07,-0.3826835,-9.538961E-08,0.9238796
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 3
+	dstg = 4
+	sidx = 2
+	sqor = 3
+	attm = 1
+	sym = launchClamp1_4294210100
+	sym = launchClamp1_4294207914
+	sym = launchClamp1_4294207804
+	srfN = srfAttach,KW3mtankL4_4294251640
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = LaunchClamp
+		isEnabled = True
+		scaleFactor = 8.910488
+		height = 22.4829
+		towerRot = 1.672293E-07,0.3826835,9.538959E-08,0.9238795
+		EVENTS
+		{
+			Release
+			{
+				active = False
+				guiActive = True
+				guiIcon = Release Clamp
+				guiName = Release Clamp
+				category = Release Clamp
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ReleaseClamp
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGenerator
+		isEnabled = True
+		generatorIsActive = False
+		throttle = 0
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Generator
+				guiName = Activate Generator
+				category = Activate Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = True
+				guiActive = True
+				guiIcon = Shutdown Generator
+				guiName = Shutdown Generator
+				category = Shutdown Generator
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	IGNORE_THIS_NODE
+	{
+	}
+}
